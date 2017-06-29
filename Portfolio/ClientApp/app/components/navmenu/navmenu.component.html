@@ -1,23 +1,29 @@
-<div class='main-nav'>
-    <div class='navbar navbar-inverse'>
-        <div class='navbar-header'>
-            <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
-                <span class='sr-only'>Toggle navigation</span>
-                <span class='icon-bar'></span>
-                <span class='icon-bar'></span>
-                <span class='icon-bar'></span>
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" (click)="isCollapsed = !isCollapsed">
+                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
             </button>
-            <a class='navbar-brand' [routerLink]="['/home']">Portfolio</a>
+            <a class="navbar-brand" [routerLink]="['/home']">Portfolio</a>
         </div>
-        <div class='clearfix'></div>
-        <div class='navbar-collapse collapse'>
-            <ul class='nav navbar-nav'>
+        <div class="collapse navbar-collapse" [collapse]="isCollapsed">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden active">
+                    <a [routerLink]="['/home']"></a>
+                </li>
                 <li [routerLinkActive]="['link-active']">
-                    <a [routerLink]="['/home']">
-                        <span class='glyphicon glyphicon-home'></span> Home
-                    </a>
+                    <a [routerLink]="['/projects']">{{resources.navbar.projects}}</a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/skills']">{{resources.navbar.skills}}</a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/about']">{{resources.navbar.about}}</a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/contact']">{{resources.navbar.contact}}</a>
                 </li>
             </ul>
         </div>
     </div>
-</div>
+</nav>

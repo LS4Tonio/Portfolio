@@ -1,9 +1,18 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
+
+import { ResourceService } from "../../services/resources/resource.service";
 
 @Component({
-    selector: 'nav-menu',
-    templateUrl: './navmenu.component.html',
-    styleUrls: ['./navmenu.component.css']
+    providers: [ResourceService],
+    selector: "nav-menu",
+    styleUrls: ["./navmenu.component.css"],
+    templateUrl: "./navmenu.component.html"
 })
 export class NavMenuComponent {
+    public isCollapsed: boolean = true;
+    public resources: object;
+
+    constructor(private _resources: ResourceService) {
+        this.resources = _resources.getNavbarMenuLabels();
+    }
 }

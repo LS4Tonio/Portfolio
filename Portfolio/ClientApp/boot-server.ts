@@ -1,17 +1,17 @@
-import 'reflect-metadata';
-import 'zone.js';
-import 'rxjs/add/operator/first';
-import { enableProdMode, ApplicationRef, NgZone, ValueProvider } from '@angular/core';
-import { platformDynamicServer, PlatformState, INITIAL_CONFIG } from '@angular/platform-server';
-import { createServerRenderer, RenderResult } from 'aspnet-prerendering';
-import { AppModule } from './app/app.module.server';
+import "reflect-metadata";
+import "zone.js";
+import "rxjs/add/operator/first";
+import { enableProdMode, ApplicationRef, NgZone, ValueProvider } from "@angular/core";
+import { platformDynamicServer, PlatformState, INITIAL_CONFIG } from "@angular/platform-server";
+import { createServerRenderer, RenderResult } from "aspnet-prerendering";
+import { AppModule } from "./app/app.module.server";
 
 enableProdMode();
 
 export default createServerRenderer(params => {
     const providers = [
-        { provide: INITIAL_CONFIG, useValue: { document: '<app></app>', url: params.url } },
-        { provide: 'ORIGIN_URL', useValue: params.origin }
+        { provide: INITIAL_CONFIG, useValue: { document: "<app></app>", url: params.url } },
+        { provide: "ORIGIN_URL", useValue: params.origin }
     ];
 
     return platformDynamicServer(providers).bootstrapModule(AppModule).then(moduleRef => {

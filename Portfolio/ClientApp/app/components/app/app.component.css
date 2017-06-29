@@ -1,6 +1,14 @@
-@media (max-width: 767px) {
-    /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
-    .body-content {
-        padding-top: 50px;
-    }
+﻿div.container-fluid {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+div.container-fluid#maincontent {
+  outline: none;
+}
+@media (min-width: 768px) {
+  div.container-fluid {
+    padding-top: 200px;
+    padding-bottom: 100px;
+  }
 }
