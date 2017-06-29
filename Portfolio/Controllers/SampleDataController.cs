@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Portfolio.Controllers
@@ -8,7 +9,8 @@ namespace Portfolio.Controllers
     [Route("api/[controller]")]
     public class SampleDataController : Controller
     {
-        private static readonly string[] Summaries = {
+        private static string[] Summaries = new[]
+        {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
@@ -30,7 +32,13 @@ namespace Portfolio.Controllers
             public int TemperatureC { get; set; }
             public string Summary { get; set; }
 
-            public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+            public int TemperatureF
+            {
+                get
+                {
+                    return 32 + (int)(TemperatureC / 0.5556);
+                }
+            }
         }
     }
 }

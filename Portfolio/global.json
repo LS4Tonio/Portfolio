@@ -1,6 +1,4 @@
 {
-    "sdk": { "version": "1.0.3" },
-    "projects": [
-        "Portfolio"
-    ]
+  "projects": [],
+  "sdk": { "version": "1.0.4" }
 }
