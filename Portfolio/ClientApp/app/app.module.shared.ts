@@ -1,4 +1,5 @@
 import { NgModule } from "@angular/core";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
 import { CollapseModule } from "ngx-bootstrap";
 
@@ -22,6 +23,8 @@ export const sharedConfig: NgModule = {
         SkillsComponent
     ],
     imports: [
+        FormsModule,
+        ReactiveFormsModule,
         RouterModule.forRoot([
             { path: "", redirectTo: "home", pathMatch: "full" },
             { path: "about", component: AboutComponent },

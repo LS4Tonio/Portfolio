@@ -1,3 +1,37 @@
 ﻿<section id="contact">
-    <h1>Want me in your crew?</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>{{resources.contact.title}}</h1>
+                <hr class="star-primary"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <form #contactForm="ngForm" (ngSubmit)="onSubmit()">
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls" [ngClass]="{'floating-label-form-group-with-value': !name.errors}">
+                            <label for="name">{{resources.contact.form.name}}</label>
+                            <input #name="ngModel" class="form-control" id="name" name="name" required type="text" [(ngModel)]="contactModel.name" [placeholder]="resources.contact.form.name"/>
+                            <div [hidden]="!name.touched || !name.errors?.required">
+                                <p class="help-block text-danger">{{resources.contact.form.validation.name.required}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls" [ngClass]="{'floating-label-form-group-with-value': !email.errors}">
+                            <label for="email">{{resources.contact.form.email}}</label>
+                            <input #email="ngModel" class="form-control" id="email" name="email" [pattern]="emailPattern" required type="email" [(ngModel)]="contactModel.email" [placeholder]="resources.contact.form.email"/>
+                            <div [hidden]="!email.touched || !email.errors?.required">
+                                <p class="help-block text-danger">{{resources.contact.form.validation.email.required}}</p>
+                            </div>
+                            <div [hidden]="!email.touched || (!email.errors?.pattern && email.errors?.required)">
+                                <p class="help-block text-danger">{{resources.contact.form.validation.email.pattern}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </section>

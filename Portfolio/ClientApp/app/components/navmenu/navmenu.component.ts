@@ -12,7 +12,7 @@ export class NavMenuComponent {
     public isCollapsed: boolean = true;
     public resources: object;
 
-    constructor(private _resources: ResourceService) {
-        this.resources = _resources.getNavbarMenuLabels();
+    constructor(resources: ResourceService) {
+        this.resources = resources.getNavbarMenuLabels();
     }
 }
