@@ -8,6 +8,11 @@
     font-weight: 700;
     border: none;
 
+    .container-fluid {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
     .navbar-brand {
         color: white;
 
@@ -25,6 +30,10 @@
         li {
             a {
                 color: white;
+
+                i.fa {
+                    width: 15px;
+                }
 
                 &:hover {
                     color: @theme-success;
@@ -56,8 +65,10 @@
     .navbar-toggle {
         color: white;
         text-transform: uppercase;
-        font-size: 10px;
-        border-color: white;
+        font-size: 14px;
+        border: none;
+        border-radius: 0;
+        margin-right: 0;
 
         &:hover,
         &:focus {
@@ -81,6 +92,11 @@
             -moz-transition: all 0.3s;
             transition: all 0.3s;
         }
+    }
+
+    .navbar-nav.navbar-right {
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .navbar-custom.affix {

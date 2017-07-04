@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h1>{{resources.contact.title}}</h1>
-                <hr class="star-primary"/>
+                <hr class="icon envelope primary" />
             </div>
         </div>
         <div class="row">
@@ -12,22 +12,57 @@
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls" [ngClass]="{'floating-label-form-group-with-value': !name.errors}">
                             <label for="name">{{resources.contact.form.name}}</label>
-                            <input #name="ngModel" class="form-control" id="name" name="name" required type="text" [(ngModel)]="contactModel.name" [placeholder]="resources.contact.form.name"/>
+                            <input #name="ngModel" class="form-control" id="name" name="name" required type="text" [(ngModel)]="contactModel.name" [placeholder]="resources.contact.form.name" />
                             <div [hidden]="!name.touched || !name.errors?.required">
                                 <p class="help-block text-danger">{{resources.contact.form.validation.name.required}}</p>
                             </div>
                         </div>
                     </div>
                     <div class="row control-group">
-                        <div class="form-group col-xs-12 floating-label-form-group controls" [ngClass]="{'floating-label-form-group-with-value': !email.errors}">
+                        <div class="form-group col-xs-12 floating-label-form-group controls" [ngClass]="{'floating-label-form-group-with-value': contactModel.email}">
                             <label for="email">{{resources.contact.form.email}}</label>
-                            <input #email="ngModel" class="form-control" id="email" name="email" [pattern]="emailPattern" required type="email" [(ngModel)]="contactModel.email" [placeholder]="resources.contact.form.email"/>
+                            <input #email="ngModel" class="form-control" id="email" name="email" [pattern]="emailPattern" required type="email" [(ngModel)]="contactModel.email" [placeholder]="resources.contact.form.email" />
                             <div [hidden]="!email.touched || !email.errors?.required">
                                 <p class="help-block text-danger">{{resources.contact.form.validation.email.required}}</p>
                             </div>
-                            <div [hidden]="!email.touched || (!email.errors?.pattern && email.errors?.required)">
+                            <div [hidden]="!email.touched || !email.errors?.pattern">
                                 <p class="help-block text-danger">{{resources.contact.form.validation.email.pattern}}</p>
                             </div>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls" [ngClass]="{'floating-label-form-group-with-value': !subject.errors}">
+                            <label for="name">{{resources.contact.form.subject}}</label>
+                            <input #subject="ngModel" class="form-control" id="subject" maxlength="144" name="subject" required type="text" [(ngModel)]="contactModel.subject" [placeholder]="resources.contact.form.subject" />
+                            <div class="floating-span help-block">
+                                <span>{{144 - contactModel.subject?.length}}</span>
+                            </div>
+                            <div [hidden]="!subject.touched || !subject.errors?.required">
+                                <p class="help-block text-danger">{{resources.contact.form.validation.subject.required}}</p>
+                            </div>
+                            <div [hidden]="!subject.touched || !subject.errors?.maxlength">
+                                <p class="help-block text-danger">{{resources.contact.form.validation.subject.maxlength}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls" [ngClass]="{'floating-label-form-group-with-value': !message.errors}">
+                            <label for="name">{{resources.contact.form.message}}</label>
+                            <textarea #message="ngModel" class="form-control" id="message" name="message" required rows="5" [(ngModel)]="contactModel.message" [placeholder]="resources.contact.form.message"></textarea>
+                            <div [hidden]="!message.touched || !message.errors?.required">
+                                <p class="help-block text-danger">{{resources.contact.form.validation.message.required}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="form-group col-xs-12">
+                            <button type="submit" class="btn btn-success btn-lg" [disabled]="contactForm.invalid">{{resources.contact.form.button.submit}}</button>
+                        </div>
+                    </div>
+                    <div class="row" *ngIf="formSubmitted">
+                        <div class="col-xs-12">
+                            <span>{{contactModel | json}}</span>
                         </div>
                     </div>
                 </form>

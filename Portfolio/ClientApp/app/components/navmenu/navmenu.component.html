@@ -1,27 +1,38 @@
-<nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+<nav class="navbar navbar-default navbar-fixed-top navbar-custom" id="mainNav">
     <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" (click)="isCollapsed = !isCollapsed">
-                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+            <button (click)="isCollapsed = !isCollapsed" aria-controls="bd-main-nav" class="navbar-toggle" type="button">
+                <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand" [routerLink]="['/home']">Portfolio</a>
+            <a (click)="isCollapsed = true" class="navbar-brand" [routerLink]="['/home']">Portfolio</a>
         </div>
-        <div class="collapse navbar-collapse" [collapse]="isCollapsed">
+
+        <div class="collapse navbar-collapse" id="bd-main-nav" [attr.aria-expanded]="!isCollapsed" [ngClass]="{'collapse': isCollapsed}">
             <ul class="nav navbar-nav navbar-right">
-                <li class="hidden active">
-                    <a [routerLink]="['/home']"></a>
+                <li class="hidden active" (click)="isCollapsed = true">
+                    <a [routerLink]="['/home']">
+                        <i class="fa fa-home"></i>
+                    </a>
                 </li>
-                <li [routerLinkActive]="['link-active']">
-                    <a [routerLink]="['/projects']">{{resources.navbar.projects}}</a>
+                <li [routerLinkActive]="['link-active']" (click)="isCollapsed = true">
+                    <a [routerLink]="['/projects']">
+                        <i class="fa fa-bookmark"></i> {{resources.navbar.projects}}
+                    </a>
                 </li>
-                <li [routerLinkActive]="['link-active']">
-                    <a [routerLink]="['/skills']">{{resources.navbar.skills}}</a>
+                <li [routerLinkActive]="['link-active']" (click)="isCollapsed = true">
+                    <a [routerLink]="['/skills']">
+                        <i class="fa fa-star"></i> {{resources.navbar.skills}}
+                    </a>
                 </li>
-                <li [routerLinkActive]="['link-active']">
-                    <a [routerLink]="['/about']">{{resources.navbar.about}}</a>
+                <li [routerLinkActive]="['link-active']" (click)="isCollapsed = true">
+                    <a [routerLink]="['/about']">
+                        <i class="fa fa-user"></i> {{resources.navbar.about}}
+                    </a>
                 </li>
-                <li [routerLinkActive]="['link-active']">
-                    <a [routerLink]="['/contact']">{{resources.navbar.contact}}</a>
+                <li [routerLinkActive]="['link-active']" (click)="isCollapsed = true">
+                    <a [routerLink]="['/contact']">
+                        <i class="fa fa-envelope"></i> {{resources.navbar.contact}}
+                    </a>
                 </li>
             </ul>
         </div>

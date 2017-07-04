@@ -5,6 +5,10 @@
   font-weight: 700;
   border: none;
 }
+.navbar-custom .container-fluid {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 .navbar-custom .navbar-brand {
   color: white;
 }
@@ -19,6 +23,9 @@
 }
 .navbar-custom .navbar-nav li a {
   color: white;
+}
+.navbar-custom .navbar-nav li a i.fa {
+  width: 15px;
 }
 .navbar-custom .navbar-nav li a:hover {
   color: #ff6a00;
@@ -44,8 +51,10 @@
 .navbar-custom .navbar-toggle {
   color: white;
   text-transform: uppercase;
-  font-size: 10px;
-  border-color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 0;
+  margin-right: 0;
 }
 .navbar-custom .navbar-toggle:hover,
 .navbar-custom .navbar-toggle:focus {
@@ -65,6 +74,10 @@
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
+  }
+  .navbar-nav.navbar-right {
+    margin-left: 0;
+    margin-right: 0;
   }
   .navbar-custom.affix {
     padding: 10px 0;

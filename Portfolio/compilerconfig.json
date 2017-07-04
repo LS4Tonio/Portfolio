@@ -4,6 +4,10 @@
     "inputFile": "ClientApp/app/components/app/app.component.less"
   },
   {
+    "outputFile": "ClientApp/app/components/about/about.component.css",
+    "inputFile": "ClientApp/app/components/about/about.component.less"
+  },
+  {
     "outputFile": "ClientApp/app/components/contact/contact.component.css",
     "inputFile": "ClientApp/app/components/contact/contact.component.less"
   },

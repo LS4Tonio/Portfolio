@@ -1,3 +1,79 @@
 ﻿<section id="about">
-    <h1>Who am I?</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>{{resources.about.title}}</h1>
+                <hr class="icon user primary" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-xs-4">
+                <img src="http://envri.eu/wp-content/uploads/2016/08/software-developer-copy-1024x1024.jpg" />
+            </div>
+            <div class="col-lg-9 col-xs-8 text-left">
+                <p>{{resources.about.description.background}}</p>
+                <br />
+                <p>{{resources.about.description.today}}</p>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-xs-12 text-left">
+                <accordion>
+                    <accordion-group panelClass="panel-primary panel-custom" #languagesPanel>
+                        <div accordion-heading>
+                            <i class="pull-left fa fa-language"></i> <span>{{resources.about.accordion.languages}}</span>
+                            <i class="pull-right fa" [ngClass]="{'fa-chevron-down': languagesPanel?.isOpen, 'fa-chevron-right': !languagesPanel?.isOpen}"></i>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <ul>
+                                    <li *ngFor="let l of languages">
+                                        <span>{{l.name}}</span>
+                                        <span class="pull-right">{{l.score}}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </accordion-group>
+                    <accordion-group panelClass="panel-primary panel-custom" #hobbiesPanel>
+                        <div accordion-heading>
+                            <i class="pull-left fa fa-futbol-o"></i> <span>{{resources.about.accordion.hobbies}}</span>
+                            <i class="pull-right fa" [ngClass]="{'fa-chevron-down': hobbiesPanel?.isOpen, 'fa-chevron-right': !hobbiesPanel?.isOpen}"></i>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <ul>
+                                    <li>
+                                        <i class="fa fa-futbol-o"></i> <span>{{resources.about.hobbies.sports}}</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-film"></i> <span>{{resources.about.hobbies.cinema}}</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-gamepad"></i> <span>{{resources.about.hobbies.videogames}}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </accordion-group>
+                    <accordion-group panelClass="panel-primary panel-custom" #transportationPanel>
+                        <div accordion-heading>
+                            <i class="pull-left fa fa-car"></i> <span>{{resources.about.accordion.transportation}}</span>
+                            <i class="pull-right fa" [ngClass]="{'fa-chevron-down': transportationPanel?.isOpen, 'fa-chevron-right': !transportationPanel?.isOpen}"></i>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <ul>
+                                    <li>
+                                        <i class="fa fa-id-card-o"></i> <span>{{resources.about.transportation.carlicense}}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </accordion-group>
+                </accordion>
+            </div>
+        </div>
+    </div>
 </section>

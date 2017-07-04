@@ -1,0 +1,31 @@
+﻿div /deep/ .panel.panel-custom {
+    position: relative;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    text-align: left;
+    box-shadow: none;
+
+    .panel-heading {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+
+        i.fa {
+            padding-top: 2px;
+        }
+    }
+
+    .panel-body {
+        border: none;
+    }
+
+    ul {
+        list-style: none;
+
+        & i.fa {
+            margin-right: 5px;
+        }
+    }
+}

@@ -1,8 +1,12 @@
 import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
-import { CollapseModule } from "ngx-bootstrap";
+import { AccordionModule, CollapseModule } from "ngx-bootstrap";
 
+// Directives imports
+import { OnFocusDirective } from "./directives/on-focus.directive";
+
+// Components imports
 import { AppComponent } from "./components/app/app.component"
 import { NavMenuComponent } from "./components/navmenu/navmenu.component";
 import { AboutComponent } from "./components/about/about.component";
@@ -14,6 +18,10 @@ import { SkillsComponent } from "./components/skills/skills.component";
 export const sharedConfig: NgModule = {
     bootstrap: [AppComponent],
     declarations: [
+        // Directives
+        OnFocusDirective,
+
+        // Components
         AppComponent,
         NavMenuComponent,
         AboutComponent,
@@ -34,6 +42,7 @@ export const sharedConfig: NgModule = {
             { path: "skills", component: SkillsComponent },
             { path: "**", redirectTo: "home" }
         ]),
+        AccordionModule.forRoot(),
         CollapseModule.forRoot()
     ]
 };

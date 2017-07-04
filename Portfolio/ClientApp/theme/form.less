@@ -5,6 +5,19 @@
     border-bottom: 1px solid @gray-lighter;
     text-align: left;
 
+    &.floating-label-form-group-with-value {
+        label {
+            top: 0;
+            opacity: 1;
+        }
+    }
+
+    &.floating-label-form-group-with-focus {
+        label {
+            color: @theme-success;
+        }
+    }
+
     input,
     textarea {
         z-index: 1;
@@ -17,6 +30,10 @@
         background: none;
         box-shadow: none !important;
         resize: none;
+
+        &:focus ~ label {
+            color: @theme-success;
+        }
     }
 
     label {
@@ -40,18 +57,12 @@
         padding-left: 14px;
         border-left: 1px solid @gray-lighter;
     }
-}
 
-.floating-label-form-group-with-value {
-    label {
-        top: 0;
-        opacity: 1;
-    }
-}
-
-.floating-label-form-group-with-focus {
-    label {
-        color: @theme-success;
+    .floating-span {
+        position: absolute;
+        bottom: 0;
+        right: 15px;
+        margin-top: 5px;
     }
 }
 

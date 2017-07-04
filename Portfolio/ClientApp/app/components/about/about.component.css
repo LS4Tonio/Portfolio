@@ -1,0 +1,75 @@
+﻿hr.icon {
+  padding: 0;
+  border: none;
+  border-top: solid 5px;
+  text-align: center;
+  max-width: 250px;
+  margin: 25px auto 30px;
+}
+hr.icon:after {
+  font-family: FontAwesome;
+  display: inline-block;
+  position: relative;
+  top: -0.8em;
+  font-size: 2em;
+  padding: 0 0.25em;
+  width: 42px;
+}
+hr.icon.light {
+  border-color: white;
+}
+hr.icon.light:after {
+  background-color: #ff6a00;
+  color: white;
+}
+hr.icon.primary {
+  border-color: #2C3E50;
+}
+hr.icon.primary:after {
+  background-color: white;
+  color: #2C3E50;
+}
+hr.icon.envelope:after {
+  content: "\f0e0";
+}
+hr.icon.info:after {
+  content: "\f129";
+}
+hr.icon.star:after {
+  content: "\f005";
+}
+hr.icon.user:after {
+  content: "\f007";
+}
+div /deep/ .panel.panel-custom {
+  position: relative;
+  margin-bottom: 10px;
+  padding-bottom: 0;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  text-align: left;
+  box-shadow: none;
+}
+div /deep/ .panel.panel-custom .panel-heading {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+div /deep/ .panel.panel-custom .panel-heading i.fa {
+  padding-top: 2px;
+}
+div /deep/ .panel.panel-custom .panel-body {
+  border: none;
+}
+div /deep/ .panel.panel-custom ul {
+  list-style: none;
+}
+div /deep/ .panel.panel-custom ul i.fa {
+  margin-right: 5px;
+}
+img {
+  width: 100%;
+}
+p {
+  font-size: 16px;
+}
