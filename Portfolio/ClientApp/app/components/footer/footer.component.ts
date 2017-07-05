@@ -6,7 +6,7 @@ import { LanguageLocalizationModel } from "../../models/language-localization.mo
 @Component({
     selector: "app-footer",
     templateUrl: "./footer.component.html",
-    styleUrls: ["./footer.component.css"]
+    styleUrls: ["./footer.component.less"]
 })
 export class FooterComponent {
     @Language() public lang: string;

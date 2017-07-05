@@ -6,7 +6,7 @@ import { LanguageScoreModel } from "../../models/language-score.model";
 @Component({
     selector: "about",
     templateUrl: "./about.component.html",
-    styleUrls: ["./about.component.css"]
+    styleUrls: ["./about.component.less"]
 })
 export class AboutComponent {
     @Language() public lang: string;

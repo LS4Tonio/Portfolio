@@ -3,7 +3,7 @@ import { Language } from "angular-l10n";
 
 @Component({
     selector: "nav-menu",
-    styleUrls: ["./navmenu.component.css"],
+    styleUrls: ["./navmenu.component.less"],
     templateUrl: "./navmenu.component.html"
 })
 export class NavMenuComponent {
