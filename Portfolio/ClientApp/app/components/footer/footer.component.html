@@ -2,27 +2,12 @@
     <div class="footer-above">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12">{{'footer.powered.by' | translate:lang}}</div>
-            </div>
-            <div class="row">
-                <div class="col-xs-3 col-xs-offset-3">
-                    <a href="https://docs.microsoft.com/en-us/aspnet/core/" target="_blank">{{'footer.powered.aspnet' | translate:lang}}</a>
-                </div>
-                <div class="col-xs-3">
-                    <a href="https://angular.io/" target="_blank">{{'footer.powered.angular' | translate:lang}}</a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="col-xs-12">{{'footer.powered.styled' | translate:lang}}</div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="footer-col col-xs-3 col-xs-offset-3">
-                    <a href="http://getbootstrap.com/" target="_blank">{{'footer.powered.bootstrap' | translate:lang}}</a>
-                </div>
-                <div class="footer-col col-xs-3">
-                    <a href="https://startbootstrap.com/template-overviews/freelancer/" target="_blank">{{'footer.powered.freelancer' | translate:lang}}</a>
+                <div class="footer-col col-xs-12">
+                    <div class="pull-right">
+                        <select class="form-control" [ngModel]="currentLanguage" (ngModelChange)="onLanguageChange($event)">
+                            <option *ngFor="let c of cultures" [value]="c.value">{{c.label | translate:lang}}</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>
@@ -31,6 +16,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">{{'footer.copyright' | translate:lang}}</div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-xs-12">
+                    <span>{{'footer.powered.by' | translate:lang}}</span> <a href="https://docs.microsoft.com/en-us/aspnet/core/" target="_blank">{{'footer.powered.aspnet' | translate:lang}}</a> <a href="https://angular.io/" target="_blank">{{'footer.powered.angular' | translate:lang}}</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <span>{{'footer.powered.styled' | translate:lang}}</span> <a href="http://getbootstrap.com/" target="_blank">{{'footer.powered.bootstrap' | translate:lang}}</a> <a href="https://startbootstrap.com/template-overviews/freelancer/" target="_blank">{{'footer.powered.freelancer' | translate:lang}}</a>
+                </div>
             </div>
         </div>
     </div>

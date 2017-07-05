@@ -59,6 +59,10 @@
       "styled": "Le style est basé sur :"
     }
   },
+  "localization": {
+    "en": "Anglais",
+    "fr": "Français"
+  },
   "navbar": {
     "about": "A propos de Moi",
     "contact": "Me Contacter",

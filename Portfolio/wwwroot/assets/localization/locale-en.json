@@ -59,6 +59,10 @@
       "styled": "Graphics based on:"
     }
   },
+  "localization": {
+    "en": "English",
+    "fr": "French"
+  },
   "navbar": {
     "about": "About Me",
     "contact": "Contact Me",
