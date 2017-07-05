@@ -22,6 +22,7 @@ export class AppModule {
         this.locale.addConfiguration()
             .addLanguages(["en", "fr"])
             .setCookieExpiration(30)
+            .defineDefaultLocale("fr", "FR")
             .defineLanguage("fr");
 
         this.translation.addConfiguration()

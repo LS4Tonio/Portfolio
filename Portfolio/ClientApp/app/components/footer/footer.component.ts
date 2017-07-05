@@ -25,7 +25,7 @@ export class FooterComponent {
             this.cultures[index] = new LanguageLocalizationModel(value);
         });
 
-        this.currentLanguage = _locale.getCurrentLanguage();
+        this.currentLanguage = _locale.getCurrentLanguage() || "fr";
     }
 
     /**
