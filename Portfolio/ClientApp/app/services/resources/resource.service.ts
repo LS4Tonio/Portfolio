@@ -1,9 +1,13 @@
 ﻿import { Injectable } from "@angular/core";
+//import { Http } from "@angular/http";
 
-import { LanguageModel } from "../../models/language.model";
+import { LanguageLocalizationModel } from "../../models/language-localization.model";
+import { LanguageScoreModel } from "../../models/language-score.model";
 
 @Injectable()
 export class ResourceService {
+    //constructor(private _http: Http) { }
+
     /**
      * Gets the labels in the given language for the about page
      * @param lang selected language - by default french
@@ -80,10 +84,24 @@ export class ResourceService {
     }
 
     /**
+     * Gets the labels for the footer
+     * @param lang selected language - by default french
+     */
+    public getFooterLabels(lang?: string): object {
+        const isFrench = this.isFrenchLanguage(lang);
+
+        return {
+            "footer": {
+                "language": isFrench ? "Langue" : "Language"
+            }
+        };
+    }
+
+    /**
      * Gets the spoken languages list
      * @param lang selected language - by default french
      */
-    public getLanguagesList(lang?: string): LanguageModel[] {
+    public getLanguagesScoreList(lang?: string): LanguageScoreModel[] {
         const isFrench = this.isFrenchLanguage(lang);
 
         return [
@@ -94,6 +112,25 @@ export class ResourceService {
             {
                 name: isFrench ? "Anglais" : "English",
                 score: "TOEIC score : 790/990"
+            }
+        ];
+    }
+
+    /**
+     * Gets the available localization languages list
+     * @param lang selected language - by default french
+     */
+    public getLanguagesLocalizationList(lang?: string): LanguageLocalizationModel[] {
+        const isFrench = this.isFrenchLanguage(lang);
+
+        return [
+            {
+                label: isFrench ? "Français" : "French",
+                value: "fr"
+            },
+            {
+                label: isFrench ? "Anglais" : "English",
+                value: "en"
             }
         ];
     }

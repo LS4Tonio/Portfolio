@@ -12,6 +12,10 @@
     "inputFile": "ClientApp/app/components/contact/contact.component.less"
   },
   {
+    "outputFile": "ClientApp/app/components/footer/footer.component.css",
+    "inputFile": "ClientApp/app/components/footer/footer.component.less"
+  },
+  {
     "inputFile": "ClientApp/app/components/navmenu/navmenu.component.less",
     "outputFile": "ClientApp/app/components/navmenu/navmenu.component.css"
   }

@@ -31,9 +31,11 @@ namespace Portfolio
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
+            // Logger & console
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
+            // Exception handler
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -47,8 +49,10 @@ namespace Portfolio
                 app.UseExceptionHandler("/Home/Error");
             }
 
+            // Serve files
             app.UseStaticFiles();
 
+            // MVC routes
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
