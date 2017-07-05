@@ -48,7 +48,16 @@
     "title": "Do you want me in your crew?"
   },
   "footer": {
-    "language": "Language"
+    "copyright": "Created by Antoine BIBES 2017",
+    "language": "Language",
+    "powered": {
+      "angular": "Angular",
+      "aspnet": "ASP.NET Core",
+      "bootstrap": "Bootstrap",
+      "by": "This website is powered by:",
+      "freelancer": "Freelancer",
+      "styled": "Graphics based on:"
+    }
   },
   "navbar": {
     "about": "About Me",

@@ -48,7 +48,16 @@
     "title": "Me voulez-vous dans votre team ?"
   },
   "footer": {
-    "language": "Langue"
+    "copyright": "Crée par Antoine BIBES 2017",
+    "language": "Langue",
+    "powered": {
+      "angular": "Angular",
+      "aspnet": "ASP.NET Core",
+      "bootstrap": "Bootstrap",
+      "by": "Ce site fonctionne sous :",
+      "freelancer": "Freelancer",
+      "styled": "Le style est basé sur :"
+    }
   },
   "navbar": {
     "about": "A propos de Moi",
