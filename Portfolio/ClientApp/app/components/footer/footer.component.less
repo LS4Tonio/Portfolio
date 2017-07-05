@@ -18,7 +18,38 @@ footer {
     }
 
     .footer-below {
+        position: relative;
         padding: 25px 0;
         background-color: darken(@theme-primary, 5%);
+    }
+
+    .language-selector {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+
+        select.form-control {
+            padding-left: 10px;
+            width: 100px;
+            border: none;
+            border-radius: 0;
+            color: white;
+            background: darken(@theme-primary, 5%);
+            box-shadow: none;
+            -webkit-box-shadow: none;
+
+            &:hover {
+                background: @theme-success;
+            }
+
+            option {
+                background: darken(@theme-primary, 5%);
+
+                &:checked {
+                    color: @theme-success;
+                    background-color: darken(@theme-primary, 5%);
+                }
+            }
+        }
     }
 }

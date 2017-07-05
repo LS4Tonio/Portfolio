@@ -3,8 +3,9 @@
 
 div.container-fluid {
     text-align: center;
-    padding-top: 55px;
-    padding-bottom: 50px;
+    padding-top: @padding-header;
+    padding-left: 0;
+    padding-right: 0;
 
     &#maincontent {
         outline: none;
@@ -13,7 +14,6 @@ div.container-fluid {
 
 @media(min-width:790px) {
     div.container-fluid {
-        padding-top: 100px;
-        padding-bottom: 100px;
+        padding-top: @padding-header-lg;
     }
 }

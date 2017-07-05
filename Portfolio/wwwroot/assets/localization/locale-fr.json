@@ -59,6 +59,28 @@
       "styled": "Le style est basé sur :"
     }
   },
+  "home": {
+    "about": {
+      "content": "Découvrez qui je suis",
+      "title": "A propos de moi"
+    },
+    "contact": {
+      "content": "Retrouvez moi",
+      "title": "Contact"
+    },
+    "header": {
+      "photo": "Bienvenue !",
+      "skills": "Développeur .NET - Développeur Web: ASP.NET et Angular"
+    },
+    "projects": {
+      "content": "Découvrez mes projets",
+      "title": "Mes Projets"
+    },
+    "skills": {
+      "content": "Découvrez mes talents",
+      "title": "Mes Compétences"
+    }
+  },
   "localization": {
     "en": "Anglais",
     "fr": "Français"

@@ -59,6 +59,28 @@
       "styled": "Graphics based on:"
     }
   },
+  "home": {
+    "about": {
+      "content": "Learn about me",
+      "title": "About Me"
+    },
+    "contact": {
+      "content": "Find me on",
+      "title": "Contact"
+    },
+    "header": {
+      "photo": "Welcome!",
+      "skills": ".NET Developer - Web Developer: ASP.NET and Angular"
+    },
+    "projects": {
+      "content": "Finds out about my projects",
+      "title": "My Projects"
+    },
+    "skills": {
+      "content": "Learn about my skills",
+      "title": "My Skills"
+    }
+  },
   "localization": {
     "en": "English",
     "fr": "French"
