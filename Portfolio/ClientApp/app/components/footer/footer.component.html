@@ -1,6 +1,6 @@
 ﻿<footer class="footer">
     <div class="pull-right">
-        <label for="language">{{resources.footer.language}}</label>
+        <label for="language">{{'footer.language' | translate:lang}}</label>
         <select class="form-control" id="language" name="language" [(ngModel)]="userLanguagePreference">
             <option *ngFor="let c of cultures" [value]="c.value">{{c.label}}</option>
         </select>

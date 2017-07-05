@@ -1,3 +1,62 @@
 ﻿{
-
+  "about": {
+    "accordion": {
+      "hobbies": "Hobbies",
+      "languages": "Languages",
+      "transportation": "Transportation"
+    },
+    "description": {
+      "background": "I am Antoine BIBES, {{age}} years old and I am graduated from IN'TECH of Group ESIEA.",
+      "today": "Today I join the active life and professional work for improve my experience and my skills."
+    },
+    "hobbies": {
+      "cinema": "Cinema",
+      "sports": "Airsoft",
+      "videogames": "Multiplayer video games"
+    },
+    "title": "Who am I?",
+    "transportation": {
+      "carlicense": "Car driver license"
+    }
+  },
+  "contact": {
+    "form": {
+      "button": {
+        "submit": "Send"
+      },
+      "email": "Email Address",
+      "message": "Message",
+      "name": "Name",
+      "subject": "Subject",
+      "validation": {
+        "email": {
+          "pattern": "Please enter valid email address: your.name@company.com.",
+          "required": "Your email address is required."
+        },
+        "message": {
+          "required": "Please type your message."
+        },
+        "name": {
+          "required": "Your name is required."
+        },
+        "subject": {
+          "maxlength": "The subject should not exceed 144 characters.",
+          "required": "Please enter the subject of your message."
+        }
+      }
+    },
+    "title": "Do you want me in your crew?"
+  },
+  "footer": {
+    "language": "Language"
+  },
+  "navbar": {
+    "about": "About Me",
+    "contact": "Contact Me",
+    "menu": {
+      "button": "Toggle navigation"
+    },
+    "projects": "My Projects",
+    "skills": "My Skills"
+  }
 }

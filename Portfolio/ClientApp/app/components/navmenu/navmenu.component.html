@@ -16,22 +16,22 @@
                 </li>
                 <li [routerLinkActive]="['link-active']" (click)="isCollapsed = true">
                     <a [routerLink]="['/projects']">
-                        <i class="fa fa-bookmark"></i> {{resources.navbar.projects}}
+                        <i class="fa fa-bookmark"></i> {{'navbar.projects' | translate:lang}}
                     </a>
                 </li>
                 <li [routerLinkActive]="['link-active']" (click)="isCollapsed = true">
                     <a [routerLink]="['/skills']">
-                        <i class="fa fa-star"></i> {{resources.navbar.skills}}
+                        <i class="fa fa-star"></i> {{'navbar.skills' | translate:lang}}
                     </a>
                 </li>
                 <li [routerLinkActive]="['link-active']" (click)="isCollapsed = true">
                     <a [routerLink]="['/about']">
-                        <i class="fa fa-user"></i> {{resources.navbar.about}}
+                        <i class="fa fa-user"></i> {{'navbar.about' | translate:lang}}
                     </a>
                 </li>
                 <li [routerLinkActive]="['link-active']" (click)="isCollapsed = true">
                     <a [routerLink]="['/contact']">
-                        <i class="fa fa-envelope"></i> {{resources.navbar.contact}}
+                        <i class="fa fa-envelope"></i> {{'navbar.contact' | translate:lang}}
                     </a>
                 </li>
             </ul>

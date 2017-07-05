@@ -52,8 +52,8 @@ div /deep/ .panel.panel-custom {
   box-shadow: none;
 }
 div /deep/ .panel.panel-custom .panel-heading {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 div /deep/ .panel.panel-custom .panel-heading i.fa {
   padding-top: 2px;

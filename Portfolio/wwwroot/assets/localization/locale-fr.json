@@ -1,3 +1,62 @@
 ﻿{
-
+  "about": {
+    "accordion": {
+      "hobbies": "Centres d'intérêts",
+      "languages": "Langues",
+      "transportation": "Transport"
+    },
+    "description": {
+      "background": "Je m’appelle Antoine BIBES, j’ai {{age}} ans et je possède un diplôme d’expert en ingénierie du logiciel, obtenu dans l’école supérieure d’ingénierie informatique IN’TECH du Groupe ESIEA.",
+      "today": "Aujourd’hui, j’entre dans la vie active et le milieu professionnel, afin de développer mon expérience et mes compétences."
+    },
+    "hobbies": {
+      "cinema": "Cinéma",
+      "sports": "Airsoft",
+      "videogames": "Jeux vidéos multijoueurs"
+    },
+    "title": "Qui suis-je ?",
+    "transportation": {
+      "carlicense": "Permis B"
+    }
+  },
+  "contact": {
+    "form": {
+      "button": {
+        "submit": "Envoyer"
+      },
+      "email": "Adresse Email",
+      "message": "Message",
+      "name": "Nom",
+      "subject": "Sujet",
+      "validation": {
+        "email": {
+          "pattern": "Veuillez entrer une adresse email valide : votre.nom@societe.com.",
+          "required": "Votre adresse email est réquise."
+        },
+        "message": {
+          "required": "Veuillez composer votre message."
+        },
+        "name": {
+          "required": "Votre nom est réquis."
+        },
+        "subject": {
+          "maxlength": "Le sujet ne doit pas dépasser les 144 caractères.",
+          "required": "Veuillez ajouter un sujet pour votre message."
+        }
+      }
+    },
+    "title": "Me voulez-vous dans votre team ?"
+  },
+  "footer": {
+    "language": "Langue"
+  },
+  "navbar": {
+    "about": "A propos de Moi",
+    "contact": "Me Contacter",
+    "menu": {
+      "button": "Afficher le menu"
+    },
+    "projects": "Mes Projets",
+    "skills": "Mes Compétences"
+  }
 }

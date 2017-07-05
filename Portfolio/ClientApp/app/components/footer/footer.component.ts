@@ -1,20 +1,17 @@
 ﻿import { Component } from "@angular/core";
+import { Language } from "angular-l10n";
 
 import { LanguageLocalizationModel } from "../../models/language-localization.model";
-import { ResourceService } from "../../services/resources/resource.service";
 
 @Component({
-    providers: [ResourceService],
     selector: "app-footer",
     templateUrl: "./footer.component.html",
     styleUrls: ["./footer.component.css"]
 })
 export class FooterComponent {
-    public cultures: LanguageLocalizationModel[];
-    public resources: object;
+    @Language() public lang: string;
 
-    constructor(resources: ResourceService) {
-        this.resources = resources.getFooterLabels();
-        this.cultures = resources.getLanguagesLocalizationList();
-    }
+    public cultures: LanguageLocalizationModel[] = [];
+
+    constructor() { }
 }

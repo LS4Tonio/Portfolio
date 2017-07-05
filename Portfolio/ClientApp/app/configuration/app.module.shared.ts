@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { AccordionModule, CollapseModule } from "ngx-bootstrap";
+import { LocalizationModule } from "angular-l10n";
 
 // Configuration
 import { routing } from "./app.routes.config";
@@ -39,6 +40,7 @@ export const sharedConfig: NgModule = {
         ReactiveFormsModule,
         routing,
         AccordionModule.forRoot(),
-        CollapseModule.forRoot()
+        CollapseModule.forRoot(),
+        LocalizationModule.forRoot()
     ]
 };

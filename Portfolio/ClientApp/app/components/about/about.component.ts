@@ -1,20 +1,20 @@
 import { Component } from "@angular/core";
+import { Language } from "angular-l10n";
 
 import { LanguageScoreModel } from "../../models/language-score.model";
-import { ResourceService } from "../../services/resources/resource.service";
 
 @Component({
-    providers: [ResourceService],
     selector: "about",
     templateUrl: "./about.component.html",
     styleUrls: ["./about.component.css"]
 })
 export class AboutComponent {
-    public languages: LanguageScoreModel[];
-    public resources: object;
+    @Language() public lang: string;
 
-    constructor(resources: ResourceService) {
-        this.resources = resources.getAboutPageLabels();
-        this.languages = resources.getLanguagesScoreList();
+    public currentAge: number;
+    public languages: LanguageScoreModel[] = [];
+
+    constructor() {
+        this.currentAge = new Date().getFullYear() - 1994;
     }
 }

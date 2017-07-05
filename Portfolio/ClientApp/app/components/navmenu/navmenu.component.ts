@@ -1,18 +1,13 @@
 import { Component } from "@angular/core";
-
-import { ResourceService } from "../../services/resources/resource.service";
+import { Language } from "angular-l10n";
 
 @Component({
-    providers: [ResourceService],
     selector: "nav-menu",
     styleUrls: ["./navmenu.component.css"],
     templateUrl: "./navmenu.component.html"
 })
 export class NavMenuComponent {
-    public isCollapsed: boolean = true;
-    public resources: object;
+    @Language() public lang: string;
 
-    constructor(resources: ResourceService) {
-        this.resources = resources.getNavbarMenuLabels();
-    }
+    public isCollapsed: boolean = true;
 }
