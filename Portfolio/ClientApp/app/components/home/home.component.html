@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <img class="img-responsive" [src]="imageSrc" [alt]="'home.header.photo' | translate:lang" />
+                <img class="img-responsive centered" [src]="imageSrc" [alt]="'home.header.photo' | translate:lang" />
                 <div class="intro-text">
                     <h1 class="name">Antoine BIBES</h1>
                     <hr class="icon star light" />
@@ -19,7 +19,15 @@
             <div class="col-lg-12">
                 <h2>{{'home.projects.title' | translate:lang}}</h2>
                 <hr class="icon bookmark primary" />
-                <span>{{'home.projects.content' | translate:lang}}</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <img class="img-responsive centered" [src]="projectImgSrc" [alt]="'home.projects.title' | translate:lang" />
+                <br />
+                <a class="btn btn-primary" [routerLink]="['/projects']">
+                    <span>{{'home.projects.content' | translate:lang}}</span> <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
         </div>
     </div>
@@ -31,7 +39,15 @@
             <div class="col-lg-12">
                 <h2>{{'home.skills.title' | translate:lang}}</h2>
                 <hr class="icon star light" />
-                <span>{{'home.skills.content' | translate:lang}}</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <img class="img-responsive centered" [src]="skillImgSrc" [alt]="'home.skills.title' | translate:lang" />
+                <br />
+                <a class="btn btn-primary" [routerLink]="['/skills']">
+                    <span>{{'home.skills.content' | translate:lang}}</span> <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
         </div>
     </div>
@@ -43,7 +59,15 @@
             <div class="col-lg-12">
                 <h2>{{'home.about.title' | translate:lang}}</h2>
                 <hr class="icon user primary" />
-                <span>{{'home.about.content' | translate:lang}}</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <img class="img-responsive centered" [src]="aboutImgSrc" [alt]="'home.about.title' | translate:lang" />
+                <br />
+                <a class="btn btn-primary" [routerLink]="['/about']">
+                    <span>{{'home.about.content' | translate:lang}}</span> <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
         </div>
     </div>
@@ -55,7 +79,15 @@
             <div class="col-lg-12">
                 <h2>{{'home.contact.title' | translate:lang}}</h2>
                 <hr class="icon envelope light" />
-                <span>{{'home.contact.content' | translate:lang}}</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <img class="img-responsive centered" [src]="contactImgSrc" [alt]="'home.contact.title' | translate:lang" />
+                <br />
+                <a class="btn btn-primary" [routerLink]="['/contact']">
+                    <span>{{'home.contact.content' | translate:lang}}</span> <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
         </div>
     </div>
