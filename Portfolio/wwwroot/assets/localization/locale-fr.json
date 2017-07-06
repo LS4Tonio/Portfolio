@@ -49,6 +49,7 @@
   },
   "footer": {
     "copyright": "Crée par Antoine BIBES 2017",
+    "help": "Avec la participation de Damien DOS SANTOS",
     "language": "Langue",
     "powered": {
       "angular": "Angular",
@@ -93,5 +94,16 @@
     },
     "projects": "Mes Projets",
     "skills": "Mes Compétences"
+  },
+  "skills": {
+    "human": {
+      "short": "Transverses",
+      "title": "Compétences Transverses"
+    },
+    "tech": {
+      "short": "Techniques",
+      "title": "Compétences Techniques"
+    },
+    "title": "Mon arbre de compétences"
   }
 }

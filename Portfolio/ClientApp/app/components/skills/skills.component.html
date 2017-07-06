@@ -1,3 +1,39 @@
 ﻿<section id="skills">
-    <h1>My levels</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>{{'skills.title' | translate:lang}}</h1>
+                <hr class="icon star primary" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="skill-item">
+                    <a [routerLink]="['/skills/technic']">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                                <h2>{{'skills.tech.short' | translate:lang}}</h2>
+                            </div>
+                        </div>
+                        <img class="img-responsive" [src]="imgTechSkill" [alt]="'skills.tech.title' | translate:lang" />
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="skill-item">
+                    <a [routerLink]="['/skills/human']">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                                <h2>{{'skills.human.short' | translate:lang}}</h2>
+                            </div>
+                        </div>
+                        <img class="img-responsive" [src]="imgHumanSkill" [alt]="'skills.human.title' | translate:lang" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>

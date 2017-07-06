@@ -49,6 +49,7 @@
   },
   "footer": {
     "copyright": "Created by Antoine BIBES 2017",
+    "help": "With the participation of Damien DOS SANTOS",
     "language": "Language",
     "powered": {
       "angular": "Angular",
@@ -93,5 +94,16 @@
     },
     "projects": "My Projects",
     "skills": "My Skills"
+  },
+  "skills": {
+    "human": {
+      "short": "Human",
+      "title": "Human Skills"
+    },
+    "tech": {
+      "short": "Technical",
+      "title": "Technical Skills"
+    },
+    "title": "My skills tree"
   }
 }

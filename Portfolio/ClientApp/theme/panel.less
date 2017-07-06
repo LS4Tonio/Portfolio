@@ -1,4 +1,32 @@
-﻿div /deep/ .panel.panel-custom {
+﻿div /deep/ .panel.panel-primary {
+    border-color: @theme-primary;
+
+    .panel-heading {
+        border-color: inherit;
+        background-color: @theme-primary;
+    }
+}
+
+div /deep/ .panel.panel-warning {
+    border-color: @theme-warning;
+
+    .panel-heading {
+        border-color: inherit;
+        background-color: @theme-warning;
+    }
+}
+
+div /deep/ .panel.panel-success {
+    border-color: @theme-success;
+
+    .panel-heading {
+        border-color: inherit;
+        background-color: @theme-success;
+        color: white;
+    }
+}
+
+div /deep/ .panel.panel-custom {
     position: relative;
     margin-bottom: 10px;
     padding-bottom: 0;

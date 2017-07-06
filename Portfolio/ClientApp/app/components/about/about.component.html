@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col-xs-12 text-left">
                 <accordion>
-                    <accordion-group panelClass="panel-primary panel-custom" #languagesPanel>
+                    <accordion-group panelClass="panel-success panel-custom" #languagesPanel>
                         <div accordion-heading>
                             <i class="pull-left fa fa-language"></i> <span>{{'about.accordion.languages' | translate:lang}}</span>
                             <i class="pull-right fa" [ngClass]="{'fa-chevron-down': languagesPanel?.isOpen, 'fa-chevron-right': !languagesPanel?.isOpen}"></i>
@@ -36,7 +36,7 @@
                             </div>
                         </div>
                     </accordion-group>
-                    <accordion-group panelClass="panel-primary panel-custom" #hobbiesPanel>
+                    <accordion-group panelClass="panel-success panel-custom" #hobbiesPanel>
                         <div accordion-heading>
                             <i class="pull-left fa fa-futbol-o"></i> <span>{{'about.accordion.hobbies' | translate:lang}}</span>
                             <i class="pull-right fa" [ngClass]="{'fa-chevron-down': hobbiesPanel?.isOpen, 'fa-chevron-right': !hobbiesPanel?.isOpen}"></i>
@@ -57,7 +57,7 @@
                             </div>
                         </div>
                     </accordion-group>
-                    <accordion-group panelClass="panel-primary panel-custom" #transportationPanel>
+                    <accordion-group panelClass="panel-success panel-custom" #transportationPanel>
                         <div accordion-heading>
                             <i class="pull-left fa fa-car"></i> <span>{{'about.accordion.transportation' | translate:lang}}</span>
                             <i class="pull-right fa" [ngClass]="{'fa-chevron-down': transportationPanel?.isOpen, 'fa-chevron-right': !transportationPanel?.isOpen}"></i>

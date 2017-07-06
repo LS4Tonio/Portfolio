@@ -6,6 +6,7 @@
     color: white;
     font-size: 20px;
     border: solid 2px white;
+    border-radius: 0;
     background: transparent;
     transition: all 0.3s ease-in-out;
     margin-top: 15px;
@@ -17,6 +18,20 @@
         color: @theme-success;
         background: white;
         border: solid 2px white;
+    }
+
+    &.dark {
+        border-color: @theme-success;
+        color: @theme-success;
+
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            color: white;
+            background: @theme-success;
+            border: solid 2px @theme-success;
+        }
     }
 }
 

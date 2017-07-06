@@ -34,8 +34,21 @@
         }
     }
 
+    &.warning {
+        border-color: @theme-warning;
+
+        &:after {
+            background-color: white;
+            color: @theme-warning;
+        }
+    }
+
     &.bookmark:after {
         content: "\f02e";
+    }
+
+    &.code:after {
+        content: "\f121";
     }
 
     &.envelope:after {

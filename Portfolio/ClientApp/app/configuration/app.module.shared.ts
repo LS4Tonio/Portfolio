@@ -19,6 +19,9 @@ import { NavMenuComponent } from "../components/navmenu/navmenu.component";
 import { ProjectsComponent } from "../components/projects/projects.component";
 import { SkillsComponent } from "../components/skills/skills.component";
 
+// Child components import
+import { TechnicSkillsComponent } from "../components/technic-skills/technic-skills.component";
+
 export const sharedConfig: NgModule = {
     bootstrap: [AppComponent],
     declarations: [
@@ -33,7 +36,10 @@ export const sharedConfig: NgModule = {
         HomeComponent,
         NavMenuComponent,
         ProjectsComponent,
-        SkillsComponent
+        SkillsComponent,
+
+        // Child components
+        TechnicSkillsComponent
     ],
     imports: [
         FormsModule,
