@@ -5,10 +5,10 @@
     public description: string;
 
     constructor(name: string) {
-        const formatedName = name.trim().toLowerCase().replace(new RegExp("\s"), "-");
+        const formatedName = name.trim().toLowerCase().replace(new RegExp(/\s/), "-");
 
         this.name = name;
-        this.url = formatedName;
+        this.url = `/skills/${formatedName}`;
         this.imageUrl = require(`./../../assets/images/skills/${formatedName}.png`);
         this.description = formatedName;
     }
