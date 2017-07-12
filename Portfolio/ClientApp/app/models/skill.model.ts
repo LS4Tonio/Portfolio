@@ -8,7 +8,7 @@
         const formatedName = name.trim().toLowerCase().replace(new RegExp(/\s/), "-");
 
         this.name = name;
-        this.url = `/skills/${formatedName}`;
+        this.url = formatedName;
         this.imageUrl = require(`./../../assets/images/skills/${formatedName}.png`);
         this.description = formatedName;
     }

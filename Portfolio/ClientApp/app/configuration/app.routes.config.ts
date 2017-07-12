@@ -46,7 +46,7 @@ export const routing = RouterModule.forRoot([
         component: TechnicSkillsComponent
     },
     {
-        path: "skill/:name",
+        path: "skills/:name",
         component: SkillDetailComponent
     },
     {

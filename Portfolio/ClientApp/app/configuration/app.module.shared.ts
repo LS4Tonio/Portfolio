@@ -18,6 +18,7 @@ import { HomeComponent } from "../components/home/home.component";
 import { NavMenuComponent } from "../components/navmenu/navmenu.component";
 import { ProjectsComponent } from "../components/projects/projects.component";
 import { SkillsComponent } from "../components/skills/skills.component";
+import { SkillDetailComponent } from "../components/skill-detail/skill-detail.component";
 
 // Child components import
 import { TechnicSkillsComponent } from "../components/technic-skills/technic-skills.component";
@@ -37,6 +38,7 @@ export const sharedConfig: NgModule = {
         NavMenuComponent,
         ProjectsComponent,
         SkillsComponent,
+        SkillDetailComponent,
 
         // Child components
         TechnicSkillsComponent
