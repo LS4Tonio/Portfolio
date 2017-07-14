@@ -1,7 +1,7 @@
 ﻿import { Component, OnDestroy, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 
-import { SkillModel } from "../../models/skill.model";
+import { SkillModel, Skills } from "../../models/skill.model";
 
 @Component({
     selector: "skill-detail",
@@ -20,12 +20,20 @@ export class SkillDetailComponent implements OnInit, OnDestroy {
         this._sub = this._route.params.subscribe(params => {
             this.name = params["name"];
 
-            this.skill = new SkillModel("CSharp");
-            // TODO: load skill detail here
+            this.skill = this.initSkill(this.name);
         });
     }
 
     public ngOnDestroy(): void {
         this._sub.unsubscribe();
+    }
+
+    private initSkill(id: string): SkillModel {
+        try {
+            const type: Skills = Skills[id];
+            return new SkillModel(type);
+        } catch (e) {
+            return new SkillModel(Skills.None);
+        }
     }
 }

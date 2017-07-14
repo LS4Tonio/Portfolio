@@ -1,7 +1,7 @@
 ﻿import { Component } from "@angular/core";
 import { Language } from "angular-l10n";
 
-import { SkillModel } from "../../models/skill.model";
+import { SkillModel, Skills } from "../../models/skill.model";
 
 @Component({
     selector: "technic-skills",
@@ -15,12 +15,12 @@ export class TechnicSkillsComponent {
 
     constructor() {
         this.technicalSkills = [
-            new SkillModel("CSharp"),
-            new SkillModel("ASP .Net"),
-            new SkillModel("HTML CSS"),
-            new SkillModel("Javascript"),
-            new SkillModel("SASS LESS"),
-            new SkillModel("Angular")
+            new SkillModel(Skills.CSharp),
+            new SkillModel(Skills.AspNet),
+            new SkillModel(Skills.HtmlCss),
+            new SkillModel(Skills.Javascript),
+            new SkillModel(Skills.SassLess),
+            new SkillModel(Skills.Angular)
         ];
     }
 }
