@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-xs-6 col-md-4" *ngFor="let s of technicalSkills">
                 <div class="skill-item-info">
-                    <a [routerLink]="['/skills', s.url]">
+                    <a [routerLink]="['/skills', s.type, s.url]">
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-2x"></i>

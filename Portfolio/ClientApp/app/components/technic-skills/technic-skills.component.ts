@@ -1,7 +1,7 @@
 ﻿import { Component } from "@angular/core";
 import { Language } from "angular-l10n";
 
-import { SkillModel, Skills } from "../../models/skill.model";
+import { SkillModel, TechnicalSkills, SkillsType } from "../../models/skill.model";
 
 @Component({
     selector: "technic-skills",
@@ -14,13 +14,10 @@ export class TechnicSkillsComponent {
     public technicalSkills: SkillModel[];
 
     constructor() {
-        this.technicalSkills = [
-            new SkillModel(Skills.CSharp),
-            new SkillModel(Skills.AspNet),
-            new SkillModel(Skills.HtmlCss),
-            new SkillModel(Skills.Javascript),
-            new SkillModel(Skills.SassLess),
-            new SkillModel(Skills.Angular)
-        ];
+        const objEnum = Object.keys(TechnicalSkills)
+            .map(k => TechnicalSkills[k] as TechnicalSkills);
+        this.technicalSkills = objEnum
+            .filter(v => typeof v === "string")
+            .map(v => new SkillModel(v.toString(), SkillsType[SkillsType.Technic]));
     }
 }
