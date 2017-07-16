@@ -12,8 +12,11 @@ export class SkillDetailComponent implements OnInit, OnDestroy {
     private _sub: any;
 
     public skill: SkillModel;
+    public skillRating: number;
 
-    constructor(private _route: ActivatedRoute) { }
+    constructor(private _route: ActivatedRoute) {
+        this.skillRating = Math.random() * 10 / 2;
+    }
 
     public ngOnInit(): void {
         this._sub = this._route.params.subscribe(params => {

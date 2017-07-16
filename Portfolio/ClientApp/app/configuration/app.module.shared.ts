@@ -9,6 +9,9 @@ import { routing } from "./app.routes.config";
 // Directives imports
 import { OnFocusDirective } from "../directives/on-focus.directive";
 
+// Behavior components
+import { RatingComponent } from "../components/rating/rating.component";
+
 // Components imports
 import { AboutComponent } from "../components/about/about.component";
 import { AppComponent } from "../components/app/app.component";
@@ -19,6 +22,7 @@ import { NavMenuComponent } from "../components/navmenu/navmenu.component";
 import { ProjectsComponent } from "../components/projects/projects.component";
 import { SkillsComponent } from "../components/skills/skills.component";
 import { SkillDetailComponent } from "../components/skill-detail/skill-detail.component";
+import { TestComponent } from "../components/test/test.component";
 
 // Child components import
 import { TechnicSkillsComponent } from "../components/technic-skills/technic-skills.component";
@@ -28,6 +32,9 @@ export const sharedConfig: NgModule = {
     declarations: [
         // Directives
         OnFocusDirective,
+
+        // Behavior components
+        RatingComponent,
 
         // Components
         AppComponent,
@@ -39,6 +46,7 @@ export const sharedConfig: NgModule = {
         ProjectsComponent,
         SkillsComponent,
         SkillDetailComponent,
+        TestComponent,
 
         // Child components
         TechnicSkillsComponent
