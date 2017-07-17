@@ -7,7 +7,6 @@ import { HomeComponent } from "../components/home/home.component";
 import { ProjectsComponent } from "../components/projects/projects.component";
 import { SkillsComponent } from "../components/skills/skills.component";
 import { SkillDetailComponent } from "../components/skill-detail/skill-detail.component";
-import { TestComponent } from "../components/test/test.component";
 
 // Child Components
 import { TechnicSkillsComponent } from "../components/technic-skills/technic-skills.component";
@@ -49,10 +48,6 @@ export const routing = RouterModule.forRoot([
     {
         path: "skills/:type/:name",
         component: SkillDetailComponent
-    },
-    {
-        path: "test/css",
-        component: TestComponent
     },
     {
         path: "**",

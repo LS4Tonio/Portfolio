@@ -1,1 +1,62 @@
-﻿
+﻿@import "./../../../theme/variables.less";
+@import "./../../../theme/mixins.less";
+@import "./../../../theme/button.less";
+
+.skill-header {
+    position: relative;
+
+    & /deep/ .back-button {
+        bottom: 5px;
+    }
+}
+
+.skill-body {
+    position: relative;
+    padding-top: 35px;
+
+    .row {
+        margin-top: 15px;
+    }
+
+    .quote-container {
+        position: relative;
+
+        i.fa {
+            color: @theme-success;
+
+            &.fa-quote-right {
+                position: relative;
+                bottom: 15px;
+            }
+        }
+
+        p.quote {
+            font-style: italic;
+            margin-bottom: 0;
+            color: @theme-success;
+            text-align: justify;
+        }
+    }
+
+    .project-links {
+        ul {
+            list-style: none;
+            padding-left: 0;
+
+            li a.btn {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.skill-footer {
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    text-align: left;
+
+    & /deep/ .back-button {
+        position: relative;
+    }
+}

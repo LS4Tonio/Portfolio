@@ -19,6 +19,9 @@
       "carlicense": "Permis B"
     }
   },
+  "common": {
+    "backbutton": "Retour à la page précédente"
+  },
   "contact": {
     "form": {
       "button": {
@@ -94,6 +97,57 @@
     },
     "projects": "Mes Projets",
     "skills": "Mes Compétences"
+  },
+  "project": {
+    "alaltecstore": {
+      "company": "AirLiquide",
+      "name": " Altec Store"
+    },
+    "dfsgc": {
+      "company": "Dassault Falcon System",
+      "name": "Gestion de Consignes"
+    },
+    "fmmmonitoring": {
+      "company": "France Media Monde",
+      "name": "Outil de Monitoring"
+    },
+    "ingleipnir": {
+      "company": "IN'TECH",
+      "name": "Gleipnir"
+    },
+    "notfound": {
+      "name": "Projet introuvable"
+    },
+    "slbheliosdashboard": {
+      "company": "Schlumberger",
+      "name": "Helios Dashboard"
+    }
+  },
+  "skill": {
+    "angular": {
+      "name": "Angular"
+    },
+    "aspnet": {
+      "name": "ASP .Net"
+    },
+    "csharp": {
+      "name": "C#"
+    },
+    "htmlcss": {
+      "name": "HTML / CSS"
+    },
+    "javascript": {
+      "name": "JavaScript"
+    },
+    "notfound": {
+      "name": "Compétence non trouvée"
+    },
+    "sassless": {
+      "name": "SASS / LESS"
+    }
+  },
+  "skill-detail": {
+    "projects": "Projets"
   },
   "skills": {
     "human": {

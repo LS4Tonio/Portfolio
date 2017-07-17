@@ -4,11 +4,15 @@
     public imageUrl: string;
     public description: string;
     public type: string;
+    public isQuote: boolean;
+    public rating: number;
+    public links: string[];
 
     constructor(id: string, type: string) {
-        console.log("ctor", id, type);
-
         let name: string;
+        let isQuote: boolean = false;
+        let rating: number = 0;
+        let links: string[] = [];
 
         try {
             switch (type.toLowerCase()) {
@@ -16,21 +20,35 @@
                     switch (id.toLowerCase()) {
                         case TechnicalSkills[TechnicalSkills.Angular].toLowerCase():
                             name = "Angular";
+                            rating = 3.5;
                             break;
                         case TechnicalSkills[TechnicalSkills.AspNet].toLowerCase():
                             name = "ASP .Net";
+                            isQuote = true;
+                            rating = 4.5;
                             break;
                         case TechnicalSkills[TechnicalSkills.CSharp].toLowerCase():
                             name = "C#";
+                            rating = 5;
+                            links = [
+                                "ingleipnir",
+                                "fmmmonitoring",
+                                "alaltecstore",
+                                "slbheliosdashboard",
+                                "dfsgc"
+                            ];
                             break;
                         case TechnicalSkills[TechnicalSkills.HtmlCss].toLowerCase():
                             name = "HTML CSS";
+                            rating = 4.5;
                             break;
                         case TechnicalSkills[TechnicalSkills.Javascript].toLowerCase():
                             name = "Javascript";
+                            rating = 4;
                             break;
                         case TechnicalSkills[TechnicalSkills.SassLess].toLowerCase():
                             name = "SASS LESS";
+                            rating = 4;
                             break;
                         default:
                             console.log("TS not found");
@@ -44,6 +62,7 @@
         } catch (e) {
             console.log("not found !!");
             this.name = "Not found";
+            this.url = "notfound";
             return;
         }
 
@@ -54,6 +73,9 @@
         this.imageUrl = require(`./../../assets/images/skills/${formatedName}.png`);
         this.description = formatedName;
         this.type = type.toLowerCase();
+        this.isQuote = isQuote;
+        this.rating = rating;
+        this.links = links;
     }
 }
 
@@ -70,8 +92,8 @@ export enum HumanSkills {
 export enum TechnicalSkills {
     CSharp,
     AspNet,
+    Angular,
+    SassLess,
     HtmlCss,
     Javascript,
-    SassLess,
-    Angular
 }

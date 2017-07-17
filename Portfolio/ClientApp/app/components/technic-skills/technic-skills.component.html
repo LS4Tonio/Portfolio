@@ -13,10 +13,10 @@
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-2x"></i>
-                                <h3>{{s.name}}</h3>
+                                <h3>{{'skill.' + s.url + '.name' | translate:lang}}</h3>
                             </div>
                         </div>
-                        <img class="img-responsive" [src]="s.imageUrl" [alt]="s.name" />
+                        <img class="img-responsive" [src]="s.imageUrl" [alt]="'skill.' + s.url + '.name' | translate:lang" />
                     </a>
                 </div>
             </div>

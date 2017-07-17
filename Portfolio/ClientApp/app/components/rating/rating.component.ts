@@ -6,5 +6,5 @@
     styleUrls: ["./rating.component.less"]
 })
 export class RatingComponent {
-    @Input("value") public rating: number;
+    @Input("value") public ratingValue: number = 0; // Set default value to 0 for stars display
 }

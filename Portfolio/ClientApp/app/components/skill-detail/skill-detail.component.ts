@@ -1,7 +1,8 @@
 ﻿import { Component, OnDestroy, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
+import { Language } from "angular-l10n";
 
-import { SkillModel, HumanSkills, TechnicalSkills, SkillsType } from "../../models/skill.model";
+import { SkillModel } from "../../models/skill.model";
 
 @Component({
     selector: "skill-detail",
@@ -11,12 +12,13 @@ import { SkillModel, HumanSkills, TechnicalSkills, SkillsType } from "../../mode
 export class SkillDetailComponent implements OnInit, OnDestroy {
     private _sub: any;
 
-    public skill: SkillModel;
-    public skillRating: number;
+    @Language() public lang: string;
 
-    constructor(private _route: ActivatedRoute) {
-        this.skillRating = Math.random() * 10 / 2;
-    }
+    public skill: SkillModel;
+
+    public isQuote: boolean = true;
+
+    constructor(private _route: ActivatedRoute) { }
 
     public ngOnInit(): void {
         this._sub = this._route.params.subscribe(params => {
