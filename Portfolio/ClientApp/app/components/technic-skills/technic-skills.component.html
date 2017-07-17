@@ -6,8 +6,9 @@
                 <hr class="icon code primary" />
             </div>
         </div>
+
         <div class="row">
-            <div class="col-xs-6 col-md-4" *ngFor="let s of technicalSkills">
+            <div *ngFor="let s of technicalSkills" class="col-xs-6 col-md-4">
                 <div class="skill-item-info">
                     <a [routerLink]="['/skills', s.type, s.url]">
                         <div class="caption">
@@ -16,7 +17,7 @@
                                 <h3>{{'skill.' + s.url + '.name' | translate:lang}}</h3>
                             </div>
                         </div>
-                        <img class="img-responsive" [src]="s.imageUrl" [alt]="'skill.' + s.url + '.name' | translate:lang" />
+                        <img class="img-responsive" [alt]="'skill.' + s.url + '.name' | translate:lang" [src]="s.imageUrl" />
                     </a>
                 </div>
             </div>

@@ -1,3 +1,26 @@
 ﻿<section id="projects">
-    <h1>My achievements</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>{{'projects.title' | translate:lang}}</h1>
+                <hr class="icon bookmark primary" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div *ngFor="let p of projects" class="col-xs-6 col-md-4">
+                <div class="project-item-info">
+                    <a [routerLink]="['/projects', p.url]">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-2x"></i>
+                                <h3>{{'project.' + p.url + '.name' | translate:lang}}</h3>
+                            </div>
+                        </div>
+                        <img class="img-responsive" [alt]="'project.' + p.url + '.name' | translate:lang" [src]="p.imageUrl" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>

@@ -1,0 +1,49 @@
+﻿@import "../../../theme/variables.less";
+@import "../../../theme/mixins.less";
+@import "../../../theme/button.less";
+@import "../../../theme/hr.less";
+
+.project-header {
+    position: relative;
+
+    & /deep/ .back-button {
+        top: 15px;
+    }
+}
+
+.project-body {
+    position: relative;
+    padding-top: 35px;
+
+    .project-links {
+        ul {
+            list-style: none;
+            padding-left: 0;
+
+            li a.btn {
+                width: 75%;
+            }
+        }
+    }
+
+    .project-details {
+        ul {
+            list-style: square;
+            padding-left: 0;
+            text-align: left;
+            margin: auto;
+            width: 50%;
+        }
+    }
+}
+
+.project-footer {
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    text-align: left;
+
+    & /deep/ .back-button {
+        position: relative;
+    }
+}

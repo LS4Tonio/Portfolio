@@ -20,7 +20,10 @@
     }
   },
   "common": {
-    "backbutton": "Retour à la page précédente"
+    "backbutton": {
+      "backtoprojects": "Retour aux Projets",
+      "backtoskills": "Retour aux Compétences"
+    }
   },
   "contact": {
     "form": {
@@ -51,7 +54,7 @@
     "title": "Me voulez-vous dans votre team ?"
   },
   "footer": {
-    "copyright": "Crée par Antoine BIBES 2017",
+    "copyright": "Crée par Antoine BIBES",
     "help": "Avec la participation de Damien DOS SANTOS",
     "language": "Langue",
     "powered": {
@@ -99,29 +102,48 @@
     "skills": "Mes Compétences"
   },
   "project": {
-    "alaltecstore": {
+    "altecstore": {
       "company": "AirLiquide",
       "name": " Altec Store"
     },
-    "dfsgc": {
+    "gc": {
       "company": "Dassault Falcon System",
       "name": "Gestion de Consignes"
     },
-    "fmmmonitoring": {
+    "monitoring": {
       "company": "France Media Monde",
       "name": "Outil de Monitoring"
     },
-    "ingleipnir": {
+    "gleipnir": {
       "company": "IN'TECH",
       "name": "Gleipnir"
     },
     "notfound": {
       "name": "Projet introuvable"
     },
-    "slbheliosdashboard": {
+    "portfolio": {
+      "name": "Portfolio"
+    },
+    "heliosdashboard": {
       "company": "Schlumberger",
       "name": "Helios Dashboard"
     }
+  },
+  "project-detail": {
+    "description": "Description",
+    "details": {
+      "label": "Détails",
+      "team3": "Equipe de 3 personnes",
+      "teamleader": "Chef de projet",
+      "gitmaster": "Git master",
+      "dotnet": "Framework .NET",
+      "csharp": "C#",
+      "winform": "Windows Forms"
+    },
+    "skills": "Compétences"
+  },
+  "projects": {
+    "title": "Mes Projets"
   },
   "skill": {
     "angular": {
@@ -147,7 +169,8 @@
     }
   },
   "skill-detail": {
-    "projects": "Projets"
+    "projects": "Projets",
+    "rating": "Niveau"
   },
   "skills": {
     "human": {
@@ -158,6 +181,6 @@
       "short": "Techniques",
       "title": "Compétences Techniques"
     },
-    "title": "Mon arbre de compétences"
+    "title": "Mes Compétences"
   }
 }

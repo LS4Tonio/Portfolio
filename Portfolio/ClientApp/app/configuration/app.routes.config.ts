@@ -5,6 +5,7 @@ import { AboutComponent } from "../components/about/about.component";
 import { ContactComponent } from "../components/contact/contact.component";
 import { HomeComponent } from "../components/home/home.component";
 import { ProjectsComponent } from "../components/projects/projects.component";
+import { ProjectDetailComponent } from "../components/project-detail/project-detail.component";
 import { SkillsComponent } from "../components/skills/skills.component";
 import { SkillDetailComponent } from "../components/skill-detail/skill-detail.component";
 
@@ -32,6 +33,10 @@ export const routing = RouterModule.forRoot([
     {
         path: "projects",
         component: ProjectsComponent
+    },
+    {
+        path: "projects/:name",
+        component: ProjectDetailComponent
     },
     {
         path: "skills",

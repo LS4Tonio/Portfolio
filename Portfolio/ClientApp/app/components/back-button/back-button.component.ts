@@ -10,5 +10,6 @@ export class BackButtonComponent {
     @Language() public lang: string;
 
     @Input() public route: string = "";
+    @Input() public text: string = "";
     @Input() public displayText: boolean = false;
 }

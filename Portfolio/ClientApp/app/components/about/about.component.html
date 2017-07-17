@@ -6,6 +6,7 @@
                 <hr class="icon user primary" />
             </div>
         </div>
+
         <div class="row">
             <div class="col-lg-3 col-xs-4">
                 <img src="http://envri.eu/wp-content/uploads/2016/08/software-developer-copy-1024x1024.jpg" />
@@ -17,10 +18,11 @@
             </div>
         </div>
         <br />
+
         <div class="row">
             <div class="col-xs-12 text-left">
                 <accordion>
-                    <accordion-group panelClass="panel-success panel-custom" #languagesPanel>
+                    <accordion-group #languagesPanel panelClass="panel-success panel-custom">
                         <div accordion-heading>
                             <i class="pull-left fa fa-language"></i> <span>{{'about.accordion.languages' | translate:lang}}</span>
                             <i class="pull-right fa" [ngClass]="{'fa-chevron-down': languagesPanel?.isOpen, 'fa-chevron-right': !languagesPanel?.isOpen}"></i>
@@ -36,7 +38,8 @@
                             </div>
                         </div>
                     </accordion-group>
-                    <accordion-group panelClass="panel-success panel-custom" #hobbiesPanel>
+
+                    <accordion-group #hobbiesPanel panelClass="panel-success panel-custom">
                         <div accordion-heading>
                             <i class="pull-left fa fa-futbol-o"></i> <span>{{'about.accordion.hobbies' | translate:lang}}</span>
                             <i class="pull-right fa" [ngClass]="{'fa-chevron-down': hobbiesPanel?.isOpen, 'fa-chevron-right': !hobbiesPanel?.isOpen}"></i>
@@ -57,7 +60,8 @@
                             </div>
                         </div>
                     </accordion-group>
-                    <accordion-group panelClass="panel-success panel-custom" #transportationPanel>
+
+                    <accordion-group #transportationPanel panelClass="panel-success panel-custom">
                         <div accordion-heading>
                             <i class="pull-left fa fa-car"></i> <span>{{'about.accordion.transportation' | translate:lang}}</span>
                             <i class="pull-right fa" [ngClass]="{'fa-chevron-down': transportationPanel?.isOpen, 'fa-chevron-right': !transportationPanel?.isOpen}"></i>

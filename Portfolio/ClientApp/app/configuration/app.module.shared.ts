@@ -21,6 +21,7 @@ import { FooterComponent } from "../components/footer/footer.component";
 import { HomeComponent } from "../components/home/home.component";
 import { NavMenuComponent } from "../components/navmenu/navmenu.component";
 import { ProjectsComponent } from "../components/projects/projects.component";
+import { ProjectDetailComponent } from "../components/project-detail/project-detail.component";
 import { SkillsComponent } from "../components/skills/skills.component";
 import { SkillDetailComponent } from "../components/skill-detail/skill-detail.component";
 
@@ -45,6 +46,7 @@ export const sharedConfig: NgModule = {
         HomeComponent,
         NavMenuComponent,
         ProjectsComponent,
+        ProjectDetailComponent,
         SkillsComponent,
         SkillDetailComponent,
 

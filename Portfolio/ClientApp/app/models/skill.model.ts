@@ -2,7 +2,6 @@
     public name: string;
     public url: string;
     public imageUrl: string;
-    public description: string;
     public type: string;
     public isQuote: boolean;
     public rating: number;
@@ -31,11 +30,12 @@
                             name = "C#";
                             rating = 5;
                             links = [
-                                "ingleipnir",
-                                "fmmmonitoring",
-                                "alaltecstore",
-                                "slbheliosdashboard",
-                                "dfsgc"
+                                "gleipnir",
+                                "monitoring",
+                                "altecstore",
+                                "heliosdashboard",
+                                "gc",
+                                "portfolio"
                             ];
                             break;
                         case TechnicalSkills[TechnicalSkills.HtmlCss].toLowerCase():
@@ -51,16 +51,13 @@
                             rating = 4;
                             break;
                         default:
-                            console.log("TS not found");
                             throw new Error("Technical skill not found");
                     }
                     break;
                 default:
-                    console.log("S not found");
                     throw new Error("Skill type not found");
             }
         } catch (e) {
-            console.log("not found !!");
             this.name = "Not found";
             this.url = "notfound";
             return;
@@ -71,7 +68,6 @@
         this.name = name;
         this.url = formatedName;
         this.imageUrl = require(`./../../assets/images/skills/${formatedName}.png`);
-        this.description = formatedName;
         this.type = type.toLowerCase();
         this.isQuote = isQuote;
         this.rating = rating;

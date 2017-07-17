@@ -2,29 +2,27 @@
 import { ActivatedRoute } from "@angular/router";
 import { Language } from "angular-l10n";
 
-import { SkillModel } from "../../models/skill.model";
+import { ProjectModel } from "../../models/project.model";
 
 @Component({
-    selector: "skill-detail",
-    templateUrl: "./skill-detail.component.html",
-    styleUrls: ["./skill-detail.component.less"]
+    selector: "project-detail",
+    templateUrl: "./project-detail.component.html",
+    styleUrls: ["./project-detail.component.less"]
 })
-export class SkillDetailComponent implements OnInit, OnDestroy {
+export class ProjectDetailComponent implements OnInit, OnDestroy {
     private _sub: any;
 
     @Language() public lang: string;
 
-    public skill: SkillModel;
-    public isQuote: boolean = true;
+    public project: ProjectModel;
 
     constructor(private _route: ActivatedRoute) { }
 
     public ngOnInit(): void {
         this._sub = this._route.params.subscribe(params => {
             const name: string = params["name"];
-            const type: string = params["type"];
 
-            this.skill = new SkillModel(name, type);
+            this.project = new ProjectModel(name);
         });
     }
 

@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <img class="img-responsive centered" [src]="imageSrc" [alt]="'home.header.photo' | translate:lang" />
+                <img class="img-responsive centered" [alt]="'home.header.photo' | translate:lang" [src]="imageSrc" />
                 <div class="intro-text">
                     <h1 class="name">Antoine BIBES</h1>
                     <hr class="icon star light" />
@@ -23,7 +23,7 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <img class="img-responsive centered" [src]="projectImgSrc" [alt]="'home.projects.title' | translate:lang" />
+                <img class="img-responsive centered" [alt]="'home.projects.title' | translate:lang" [src]="projectImgSrc" />
                 <br />
                 <a class="btn btn-outline dark" [routerLink]="['/projects']">
                     <span>{{'home.projects.content' | translate:lang}}</span> <i class="fa fa-chevron-right"></i>
@@ -43,7 +43,7 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <img class="img-responsive centered" [src]="skillImgSrc" [alt]="'home.skills.title' | translate:lang" />
+                <img class="img-responsive centered" [alt]="'home.skills.title' | translate:lang" [src]="skillImgSrc" />
                 <br />
                 <a class="btn btn-outline" [routerLink]="['/skills']">
                     <span>{{'home.skills.content' | translate:lang}}</span> <i class="fa fa-chevron-right"></i>
@@ -63,7 +63,7 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <img class="img-responsive centered" [src]="aboutImgSrc" [alt]="'home.about.title' | translate:lang" />
+                <img class="img-responsive centered" [alt]="'home.about.title' | translate:lang" [src]="aboutImgSrc" />
                 <br />
                 <a class="btn btn-outline dark" [routerLink]="['/about']">
                     <span>{{'home.about.content' | translate:lang}}</span> <i class="fa fa-chevron-right"></i>
@@ -83,7 +83,7 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <img class="img-responsive centered" [src]="contactImgSrc" [alt]="'home.contact.title' | translate:lang" />
+                <img class="img-responsive centered" [alt]="'home.contact.title' | translate:lang" [src]="contactImgSrc" />
                 <br />
                 <a class="btn btn-outline" [routerLink]="['/contact']">
                     <span>{{'home.contact.content' | translate:lang}}</span> <i class="fa fa-chevron-right"></i>

@@ -1,12 +1,13 @@
 ﻿@import "./../../../theme/variables.less";
 @import "./../../../theme/mixins.less";
 @import "./../../../theme/button.less";
+@import "./../../../theme/hr.less";
 
 .skill-header {
     position: relative;
 
     & /deep/ .back-button {
-        bottom: 5px;
+        top: 15px;
     }
 }
 
@@ -14,20 +15,11 @@
     position: relative;
     padding-top: 35px;
 
-    .row {
-        margin-top: 15px;
-    }
-
     .quote-container {
-        position: relative;
+        margin-bottom: 15px;
 
         i.fa {
             color: @theme-success;
-
-            &.fa-quote-right {
-                position: relative;
-                bottom: 15px;
-            }
         }
 
         p.quote {
@@ -38,13 +30,13 @@
         }
     }
 
-    .project-links {
+    .skill-links {
         ul {
             list-style: none;
             padding-left: 0;
 
             li a.btn {
-                width: 100%;
+                width: 75%;
             }
         }
     }

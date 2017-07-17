@@ -20,7 +20,10 @@
     }
   },
   "common": {
-    "backbutton": "Back to previous page"
+    "backbutton": {
+      "backtoprojects": "Back to Projects",
+      "backtoskills": "Back to Skills"
+    }
   },
   "contact": {
     "form": {
@@ -51,7 +54,7 @@
     "title": "Do you want me in your crew?"
   },
   "footer": {
-    "copyright": "Created by Antoine BIBES 2017",
+    "copyright": "Created by Antoine BIBES",
     "help": "With the participation of Damien DOS SANTOS",
     "language": "Language",
     "powered": {
@@ -99,29 +102,48 @@
     "skills": "My Skills"
   },
   "project": {
-    "alaltecstore": {
+    "altecstore": {
       "company": "AirLiquide",
       "name": "Altec Store"
     },
-    "dfsgc": {
+    "gc": {
       "company": "Dassault Falcon System",
       "name": "Instruction Management"
     },
-    "fmmmonitoring": {
+    "monitoring": {
       "company": "France Media Monde",
       "name": "Monitoring Tool"
     },
-    "ingleipnir": {
+    "gleipnir": {
       "company": "IN'TECH",
       "name": "Gleipnir"
     },
     "notfound": {
       "name": "Project not found"
     },
-    "slbheliosdashboard": {
+    "portfolio": {
+      "name": "Portfolio"
+    },
+    "heliosdashboard": {
       "company": "Schlumberger",
       "name": "Helios Dashboard"
     }
+  },
+  "project-detail": {
+    "description": "Description",
+    "details": {
+      "label": "Details",
+      "team3": "Team of 3 persons",
+      "teamleader": "Team leader",
+      "gitmaster": "Git master",
+      "dotnet": "Framework .NET",
+      "csharp": "C#",
+      "winform": "Windows Forms"
+    },
+    "skills": "Skills"
+  },
+  "projects": {
+    "title": "My Projects"
   },
   "skill": {
     "angular": {
@@ -147,7 +169,8 @@
     }
   },
   "skill-detail": {
-    "projects": "Projects"
+    "projects": "Projects",
+    "rating": "Level"
   },
   "skills": {
     "human": {
@@ -158,6 +181,6 @@
       "short": "Technical",
       "title": "Technical Skills"
     },
-    "title": "My skills tree"
+    "title": "My skills"
   }
 }

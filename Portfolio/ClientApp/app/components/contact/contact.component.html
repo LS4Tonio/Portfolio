@@ -21,7 +21,7 @@
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls" [ngClass]="{'floating-label-form-group-with-value': contactModel.email}">
                             <label for="email">{{'contact.form.email' | translate:lang}}</label>
-                            <input #email="ngModel" class="form-control" id="email" name="email" [pattern]="emailPattern" required type="email" [(ngModel)]="contactModel.email" [placeholder]="'contact.form.email' | translate:lang" />
+                            <input #email="ngModel" class="form-control" id="email" name="email" required type="email" [(ngModel)]="contactModel.email" [pattern]="emailPattern" [placeholder]="'contact.form.email' | translate:lang" />
                             <div [hidden]="!email.touched || !email.errors?.required">
                                 <p class="help-block text-danger">{{'contact.form.validation.email.required' | translate:lang}}</p>
                             </div>
@@ -57,10 +57,10 @@
                     <br />
                     <div class="row">
                         <div class="form-group col-xs-12">
-                            <button type="submit" class="btn btn-success btn-lg" [disabled]="contactForm.invalid">{{'contact.form.button.submit' | translate:lang}}</button>
+                            <button class="btn btn-success btn-lg" type="submit" [disabled]="contactForm.invalid">{{'contact.form.button.submit' | translate:lang}}</button>
                         </div>
                     </div>
-                    <div class="row" *ngIf="formSubmitted">
+                    <div *ngIf="formSubmitted" class="row">
                         <div class="col-xs-12">
                             <span>{{contactModel | json}}</span>
                         </div>
