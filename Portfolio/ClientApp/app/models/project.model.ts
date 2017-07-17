@@ -19,14 +19,55 @@ export class ProjectModel {
                 case Projects[Projects.AltecStore].toLowerCase():
                     name = "Altec Store";
                     company = "AirLiquide";
+                    links = [
+                        new SkillModel(TechnicalSkills[TechnicalSkills.CSharp], SkillsType[SkillsType.Technic]),
+                        new SkillModel(TechnicalSkills[TechnicalSkills.AspNet], SkillsType[SkillsType.Technic]),
+                        new SkillModel(TechnicalSkills[TechnicalSkills.HtmlCss], SkillsType[SkillsType.Technic]),
+                        new SkillModel(TechnicalSkills[TechnicalSkills.Javascript], SkillsType[SkillsType.Technic])
+                    ];
+                    details = [
+                        "dotnet",
+                        "csharp",
+                        "aspnet",
+                        "jquery",
+                        "wpf",
+                        "sqlserver"
+                    ];
                     break;
                 case Projects[Projects.GC].toLowerCase():
                     name = "Gesion de Consignes";
                     company = "Dassault Falcon System";
+                    links = [
+                        new SkillModel(TechnicalSkills[TechnicalSkills.CSharp], SkillsType[SkillsType.Technic]),
+                        new SkillModel(TechnicalSkills[TechnicalSkills.AspNet], SkillsType[SkillsType.Technic]),
+                        new SkillModel(TechnicalSkills[TechnicalSkills.Angular], SkillsType[SkillsType.Technic]),
+                        new SkillModel(TechnicalSkills[TechnicalSkills.HtmlCss], SkillsType[SkillsType.Technic]),
+                        new SkillModel(TechnicalSkills[TechnicalSkills.Javascript], SkillsType[SkillsType.Technic])
+                    ];
+                    details = [
+                        "dotnet",
+                        "csharp",
+                        "aspnet",
+                        "jquery",
+                        "angularjs",
+                        "sqlserver"
+                    ];
                     break;
                 case Projects[Projects.Monitoring].toLowerCase():
                     name = "Monitoring Tool";
                     company = "France Media Monde";
+                    links = [
+                        new SkillModel(TechnicalSkills[TechnicalSkills.CSharp], SkillsType[SkillsType.Technic]),
+                        new SkillModel(TechnicalSkills[TechnicalSkills.AspNet], SkillsType[SkillsType.Technic]),
+                        new SkillModel(TechnicalSkills[TechnicalSkills.HtmlCss], SkillsType[SkillsType.Technic]),
+                        new SkillModel(TechnicalSkills[TechnicalSkills.Javascript], SkillsType[SkillsType.Technic])
+                    ];
+                    details = [
+                        "dotnet",
+                        "csharp",
+                        "aspnet",
+                        "jquery"
+                    ];
                     break;
                 case Projects[Projects.Gleipnir].toLowerCase():
                     name = "Gleipnir";
@@ -47,12 +88,38 @@ export class ProjectModel {
                     name = "Porfolio";
                     company = "";
                     links = [
-                        new SkillModel(TechnicalSkills[TechnicalSkills.CSharp], SkillsType[SkillsType.Technic])
+                        new SkillModel(TechnicalSkills[TechnicalSkills.CSharp], SkillsType[SkillsType.Technic]),
+                        new SkillModel(TechnicalSkills[TechnicalSkills.AspNet], SkillsType[SkillsType.Technic]),
+                        new SkillModel(TechnicalSkills[TechnicalSkills.Angular], SkillsType[SkillsType.Technic]),
+                        new SkillModel(TechnicalSkills[TechnicalSkills.SassLess], SkillsType[SkillsType.Technic]),
+                        new SkillModel(TechnicalSkills[TechnicalSkills.HtmlCss], SkillsType[SkillsType.Technic])
+                    ];
+                    details = [
+                        "dotnet",
+                        "csharp",
+                        "aspnetcore",
+                        "angular",
+                        "typescript"
                     ];
                     break;
                 case Projects[Projects.HeliosDashboard].toLowerCase():
                     name = "Helios Dashboard";
                     company = "Schlumberger";
+                    links = [
+                        new SkillModel(TechnicalSkills[TechnicalSkills.CSharp], SkillsType[SkillsType.Technic]),
+                        new SkillModel(TechnicalSkills[TechnicalSkills.AspNet], SkillsType[SkillsType.Technic]),
+                        new SkillModel(TechnicalSkills[TechnicalSkills.Angular], SkillsType[SkillsType.Technic]),
+                        new SkillModel(TechnicalSkills[TechnicalSkills.SassLess], SkillsType[SkillsType.Technic]),
+                        new SkillModel(TechnicalSkills[TechnicalSkills.HtmlCss], SkillsType[SkillsType.Technic]),
+                        new SkillModel(TechnicalSkills[TechnicalSkills.Javascript], SkillsType[SkillsType.Technic])
+                    ];
+                    details = [
+                        "dotnet",
+                        "csharp",
+                        "aspnetcore",
+                        "angularjs",
+                        "jquery"
+                    ];
                     break;
 
                 default:

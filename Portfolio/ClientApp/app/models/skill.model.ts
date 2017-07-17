@@ -10,7 +10,7 @@
     constructor(id: string, type: string) {
         let name: string;
         let isQuote: boolean = false;
-        let rating: number = 0;
+        let rating: number;
         let links: string[] = [];
 
         try {
@@ -20,11 +20,23 @@
                         case TechnicalSkills[TechnicalSkills.Angular].toLowerCase():
                             name = "Angular";
                             rating = 3.5;
+                            links = [
+                                "gc",
+                                "portfolio",
+                                "heliosdashboard"
+                            ];
                             break;
                         case TechnicalSkills[TechnicalSkills.AspNet].toLowerCase():
                             name = "ASP .Net";
                             isQuote = true;
                             rating = 4.5;
+                            links = [
+                                "altecstore",
+                                "gc",
+                                "monitoring",
+                                "portfolio",
+                                "heliosdashboard"
+                            ];
                             break;
                         case TechnicalSkills[TechnicalSkills.CSharp].toLowerCase():
                             name = "C#";
@@ -41,14 +53,31 @@
                         case TechnicalSkills[TechnicalSkills.HtmlCss].toLowerCase():
                             name = "HTML CSS";
                             rating = 4.5;
+                            links = [
+                                "altecstore",
+                                "gc",
+                                "monitoring",
+                                "portfolio",
+                                "heliosdashboard"
+                            ];
                             break;
                         case TechnicalSkills[TechnicalSkills.Javascript].toLowerCase():
                             name = "Javascript";
                             rating = 4;
+                            links = [
+                                "altecstore",
+                                "gc",
+                                "monitoring",
+                                "heliosdashboard"
+                            ];
                             break;
                         case TechnicalSkills[TechnicalSkills.SassLess].toLowerCase():
                             name = "SASS LESS";
                             rating = 4;
+                            links = [
+                                "portfolio",
+                                "heliosdashboard"
+                            ];
                             break;
                         default:
                             throw new Error("Technical skill not found");

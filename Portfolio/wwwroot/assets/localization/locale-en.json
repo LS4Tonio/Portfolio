@@ -132,13 +132,21 @@
   "project-detail": {
     "description": "Description",
     "details": {
+      "angular": "Angular 4",
+      "angularjs": "Angular JS",
+      "aspnet": "ASP .Net",
+      "aspnetcore": "ASP .Net Core",
+      "csharp": "C#",
+      "dotnet": "Framework .NET",
+      "gitmaster": "Git master",
+      "jquery": "jQuery",
       "label": "Details",
+      "sqlserver": "SQL Server",
       "team3": "Team of 3 persons",
       "teamleader": "Team leader",
-      "gitmaster": "Git master",
-      "dotnet": "Framework .NET",
-      "csharp": "C#",
-      "winform": "Windows Forms"
+      "typescript": "TypeScript",
+      "winform": "Windows Forms",
+      "wpf": "WPF"
     },
     "skills": "Skills"
   },
