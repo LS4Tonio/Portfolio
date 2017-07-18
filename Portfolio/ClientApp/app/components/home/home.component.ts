@@ -11,7 +11,7 @@ export class HomeComponent {
 
     public imageSrc: any = require("./../../../assets/images/me-colored.jpg");
     public aboutImgSrc: any = require("./../../../assets/images/me-whited.jpg");
-    public contactImgSrc: any = require("./../../../assets/images/home/contact.jpg");
-    public projectImgSrc: any = require("./../../../assets/images/home/project.jpg");
-    public skillImgSrc: any = require("./../../../assets/images/home/skill.jpg");
+    public contactImgSrc: any = require("./../../../assets/images/home/contact.png");
+    public projectImgSrc: any = require("./../../../assets/images/home/project.png");
+    public skillImgSrc: any = require("./../../../assets/images/home/skill.png");
 }

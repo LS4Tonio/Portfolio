@@ -3,6 +3,7 @@
 @import "./../../../theme/button.less";
 @import "./../../../theme/hr.less";
 @import "./../../../theme/image.less";
+@import "./../../../theme/section.less";
 
 header {
     text-align: center;
@@ -40,18 +41,22 @@ header {
 section {
     padding: @padding-header 0;
 
-    h2 {
-        margin: 0;
-        font-size: 3em;
+    img {
+        width: 50%;
+    }
+
+    .btn.btn-outline {
+        width: 50%;
     }
 }
 
-section.success {
-    background: @theme-success;
-    color: white;
+@media(max-width: 540px) {
+    section .btn.btn-outline {
+        width: 90%;
+    }
 }
 
-@media(min-width:790px) {
+@media(min-width: 790px) {
     header {
         .container {
             padding-top: @padding-header-lg;

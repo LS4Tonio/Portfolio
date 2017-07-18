@@ -13,13 +13,31 @@ div.container-fluid {
     }
 }
 
-@media(max-width:500px) {
+@media(max-width: 500px) {
     div.container-fluid {
         padding-bottom: 150px;
     }
 }
 
-@media(min-width:790px) {
+@media(max-height: 600px) {
+    div.container-fluid {
+        padding-bottom: 50px;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 790px) {
+    div.container-fluid {
+        padding-top: 100px;
+    }
+}
+
+@media(min-width: 850px) and (max-width: 958px) {
+    div.container-fluid {
+        padding-top: 150px;
+    }
+}
+
+@media(min-width: 958px) {
     div.container-fluid {
         padding-top: @padding-header-lg;
     }

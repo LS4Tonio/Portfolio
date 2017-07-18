@@ -1,0 +1,69 @@
+﻿section {
+    background: transparent;
+    color: @theme-primary;
+
+    h2 {
+        margin: 0;
+        font-size: 3em;
+    }
+
+    &.primary {
+        background: @theme-primary;
+        color: white;
+
+        & /deep/ hr.icon {
+            color: white;
+            border-color: white;
+
+            &:after {
+                background-color: @theme-primary;
+                color: white;
+            }
+        }
+    }
+
+    &.success {
+        background: @theme-success;
+        color: white;
+
+        & /deep/ hr.icon {
+            color: white;
+            border-color: white;
+
+            &:after {
+                background-color: @theme-success;
+                color: white;
+            }
+        }
+    }
+
+    &.warning {
+        background: @theme-warning;
+        color: white;
+
+        & /deep/ hr.icon {
+            color: white;
+            border-color: white;
+
+            &:after {
+                background-color: @theme-warning;
+                color: white;
+            }
+        }
+    }
+
+    &.info {
+        background-color: @theme-info;
+        color: white;
+
+        & /deep/ hr.icon {
+            color: white;
+            border-color: white;
+
+            &:after {
+                background-color: @theme-info;
+                color: white;
+            }
+        }
+    }
+}

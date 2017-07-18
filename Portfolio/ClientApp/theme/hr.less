@@ -6,6 +6,10 @@
     max-width: 250px;
     margin: 25px auto 30px;
 
+    &.icon-lg {
+        max-width: 350px;
+    }
+
     &:after {
         font-family: FontAwesome;
         display: inline-block;
@@ -65,5 +69,11 @@
 
     &.user:after {
         content: "\f007";
+    }
+}
+
+@media(max-width: 540px) {
+    hr.icon.icon-lg {
+        max-width: 250px;
     }
 }

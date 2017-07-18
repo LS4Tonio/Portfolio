@@ -5,7 +5,7 @@
                 <img class="img-responsive centered" [alt]="'home.header.photo' | translate:lang" [src]="imageSrc" />
                 <div class="intro-text">
                     <h1 class="name">Antoine BIBES</h1>
-                    <hr class="icon star light" />
+                    <hr class="icon icon-lg star light" />
                     <span class="skills">{{'home.header.skills' | translate:lang}}</span>
                 </div>
             </div>
@@ -18,14 +18,14 @@
         <div class="row">
             <div class="col-lg-12">
                 <h2>{{'home.projects.title' | translate:lang}}</h2>
-                <hr class="icon bookmark primary" />
+                <hr class="icon icon-lg bookmark primary" />
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12">
                 <img class="img-responsive centered" [alt]="'home.projects.title' | translate:lang" [src]="projectImgSrc" />
                 <br />
-                <a class="btn btn-outline success" [routerLink]="['/projects']">
+                <a class="btn btn-outline info" [routerLink]="['/projects']">
                     <span>{{'home.projects.content' | translate:lang}}</span> <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
@@ -33,19 +33,19 @@
     </div>
 </section>
 
-<section class="success" id="skills">
+<section id="skills">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <h2>{{'home.skills.title' | translate:lang}}</h2>
-                <hr class="icon star light" />
+                <hr class="icon icon-lg star primary" />
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12">
                 <img class="img-responsive centered" [alt]="'home.skills.title' | translate:lang" [src]="skillImgSrc" />
                 <br />
-                <a class="btn btn-outline" [routerLink]="['/skills']">
+                <a class="btn btn-outline warning" [routerLink]="['/skills']">
                     <span>{{'home.skills.content' | translate:lang}}</span> <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
@@ -58,7 +58,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h2>{{'home.about.title' | translate:lang}}</h2>
-                <hr class="icon user primary" />
+                <hr class="icon icon-lg user primary" />
             </div>
         </div>
         <div class="row">
@@ -73,19 +73,19 @@
     </div>
 </section>
 
-<section class="success" id="contact">
+<section id="contact">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <h2>{{'home.contact.title' | translate:lang}}</h2>
-                <hr class="icon envelope light" />
+                <hr class="icon icon-lg envelope primary" />
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12">
                 <img class="img-responsive centered" [alt]="'home.contact.title' | translate:lang" [src]="contactImgSrc" />
                 <br />
-                <a class="btn btn-outline" [routerLink]="['/contact']">
+                <a class="btn btn-outline primary" [routerLink]="['/contact']">
                     <span>{{'home.contact.content' | translate:lang}}</span> <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
