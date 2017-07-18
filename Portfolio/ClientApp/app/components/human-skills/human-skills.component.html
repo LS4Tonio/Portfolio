@@ -1,20 +1,20 @@
-<section id="technicalSkills">
+<section id="humanSkills">
     <div class="container">
-        <div class="technic-skill-header">
+        <div class="human-skill-header">
             <div class="row">
                 <div class="col-xs-12">
-                    <h1>{{'skills.tech.title' | translate:lang}}</h1>
+                    <h1>{{'skills.human.title' | translate:lang}}</h1>
                     <hr class="icon code primary" />
                 </div>
                 <back-button [route]="'/skills'"></back-button>
             </div>
         </div>
-        <div class="technic-skill-body">
+        <div class="human-skill-body">
             <div class="row">
-                <div *ngFor="let s of technicalSkills" class="col-xs-6 col-md-4">
+                <div *ngFor="let s of humanSkills" class="col-xs-6 col-md-4">
                     <div class="skill-item-info">
                         <a [routerLink]="['/skills', s.type, s.url]">
-                            <div class="caption warning">
+                            <div class="caption success">
                                 <div class="caption-content">
                                     <i class="fa fa-search-plus fa-2x"></i>
                                     <h3>{{'skill.' + s.url + '.name' | translate:lang}}</h3>
@@ -26,7 +26,7 @@
                 </div>
             </div>
         </div>
-        <div class="technic-skill-footer">
+        <div class="human-skill-footer">
             <div class="row">
                 <back-button [displayText]="true" [route]="'/skills'" [text]="'backtoskillstype'"></back-button>
             </div>

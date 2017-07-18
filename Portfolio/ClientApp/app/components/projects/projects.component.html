@@ -11,7 +11,7 @@
             <div *ngFor="let p of projects" class="col-xs-6 col-md-4">
                 <div class="project-item-info">
                     <a [routerLink]="['/projects', p.url]">
-                        <div class="caption">
+                        <div class="caption info">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-2x"></i>
                                 <h3>{{'project.' + p.url + '.name' | translate:lang}}</h3>

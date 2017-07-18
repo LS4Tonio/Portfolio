@@ -31,7 +31,7 @@
                             <div class="col-xs-12">
                                 <ul>
                                     <li *ngFor="let link of project.links">
-                                        <a class="btn btn-outline dark" [routerLink]="['/skills', link.type, link.url]">
+                                        <a class="btn btn-outline" [routerLink]="['/skills', link.type, link.url]" [ngClass]="{'success': link.typeId === 1, 'warning': link.typeId === 2}">
                                             {{'skill.' + link.url + '.name' | translate:lang}}
                                         </a>
                                     </li>

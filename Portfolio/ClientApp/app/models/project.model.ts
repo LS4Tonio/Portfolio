@@ -1,4 +1,4 @@
-﻿import { SkillModel, SkillsType, TechnicalSkills } from "./skill.model";
+﻿import { SkillModel, SkillsType, HumanSkills, TechnicalSkills } from "./skill.model";
 
 export class ProjectModel {
     public name: string;
@@ -23,7 +23,10 @@ export class ProjectModel {
                         new SkillModel(TechnicalSkills[TechnicalSkills.CSharp], SkillsType[SkillsType.Technic]),
                         new SkillModel(TechnicalSkills[TechnicalSkills.AspNet], SkillsType[SkillsType.Technic]),
                         new SkillModel(TechnicalSkills[TechnicalSkills.HtmlCss], SkillsType[SkillsType.Technic]),
-                        new SkillModel(TechnicalSkills[TechnicalSkills.Javascript], SkillsType[SkillsType.Technic])
+                        new SkillModel(TechnicalSkills[TechnicalSkills.Javascript], SkillsType[SkillsType.Technic]),
+                        new SkillModel(HumanSkills[HumanSkills.Adaptability], SkillsType[SkillsType.Human]),
+                        new SkillModel(HumanSkills[HumanSkills.Serious], SkillsType[SkillsType.Human]),
+                        new SkillModel(HumanSkills[HumanSkills.TeamWork], SkillsType[SkillsType.Human])
                     ];
                     details = [
                         "dotnet",
@@ -42,7 +45,10 @@ export class ProjectModel {
                         new SkillModel(TechnicalSkills[TechnicalSkills.AspNet], SkillsType[SkillsType.Technic]),
                         new SkillModel(TechnicalSkills[TechnicalSkills.Angular], SkillsType[SkillsType.Technic]),
                         new SkillModel(TechnicalSkills[TechnicalSkills.HtmlCss], SkillsType[SkillsType.Technic]),
-                        new SkillModel(TechnicalSkills[TechnicalSkills.Javascript], SkillsType[SkillsType.Technic])
+                        new SkillModel(TechnicalSkills[TechnicalSkills.Javascript], SkillsType[SkillsType.Technic]),
+                        new SkillModel(HumanSkills[HumanSkills.Adaptability], SkillsType[SkillsType.Human]),
+                        new SkillModel(HumanSkills[HumanSkills.Autonomy], SkillsType[SkillsType.Human]),
+                        new SkillModel(HumanSkills[HumanSkills.Serious], SkillsType[SkillsType.Human])
                     ];
                     details = [
                         "dotnet",
@@ -60,7 +66,10 @@ export class ProjectModel {
                         new SkillModel(TechnicalSkills[TechnicalSkills.CSharp], SkillsType[SkillsType.Technic]),
                         new SkillModel(TechnicalSkills[TechnicalSkills.AspNet], SkillsType[SkillsType.Technic]),
                         new SkillModel(TechnicalSkills[TechnicalSkills.HtmlCss], SkillsType[SkillsType.Technic]),
-                        new SkillModel(TechnicalSkills[TechnicalSkills.Javascript], SkillsType[SkillsType.Technic])
+                        new SkillModel(TechnicalSkills[TechnicalSkills.Javascript], SkillsType[SkillsType.Technic]),
+                        new SkillModel(HumanSkills[HumanSkills.Adaptability], SkillsType[SkillsType.Human]),
+                        new SkillModel(HumanSkills[HumanSkills.Autonomy], SkillsType[SkillsType.Human]),
+                        new SkillModel(HumanSkills[HumanSkills.Serious], SkillsType[SkillsType.Human])
                     ];
                     details = [
                         "dotnet",
@@ -73,7 +82,10 @@ export class ProjectModel {
                     name = "Gleipnir";
                     company = "IN'TECH";
                     links = [
-                        new SkillModel(TechnicalSkills[TechnicalSkills.CSharp], SkillsType[SkillsType.Technic])
+                        new SkillModel(TechnicalSkills[TechnicalSkills.CSharp], SkillsType[SkillsType.Technic]),
+                        new SkillModel(HumanSkills[HumanSkills.Adaptability], SkillsType[SkillsType.Human]),
+                        new SkillModel(HumanSkills[HumanSkills.Serious], SkillsType[SkillsType.Human]),
+                        new SkillModel(HumanSkills[HumanSkills.TeamWork], SkillsType[SkillsType.Human])
                     ];
                     details = [
                         "dotnet",
@@ -92,7 +104,9 @@ export class ProjectModel {
                         new SkillModel(TechnicalSkills[TechnicalSkills.AspNet], SkillsType[SkillsType.Technic]),
                         new SkillModel(TechnicalSkills[TechnicalSkills.Angular], SkillsType[SkillsType.Technic]),
                         new SkillModel(TechnicalSkills[TechnicalSkills.SassLess], SkillsType[SkillsType.Technic]),
-                        new SkillModel(TechnicalSkills[TechnicalSkills.HtmlCss], SkillsType[SkillsType.Technic])
+                        new SkillModel(TechnicalSkills[TechnicalSkills.HtmlCss], SkillsType[SkillsType.Technic]),
+                        new SkillModel(HumanSkills[HumanSkills.Autonomy], SkillsType[SkillsType.Human]),
+                        new SkillModel(HumanSkills[HumanSkills.Serious], SkillsType[SkillsType.Human])
                     ];
                     details = [
                         "dotnet",
@@ -111,7 +125,11 @@ export class ProjectModel {
                         new SkillModel(TechnicalSkills[TechnicalSkills.Angular], SkillsType[SkillsType.Technic]),
                         new SkillModel(TechnicalSkills[TechnicalSkills.SassLess], SkillsType[SkillsType.Technic]),
                         new SkillModel(TechnicalSkills[TechnicalSkills.HtmlCss], SkillsType[SkillsType.Technic]),
-                        new SkillModel(TechnicalSkills[TechnicalSkills.Javascript], SkillsType[SkillsType.Technic])
+                        new SkillModel(TechnicalSkills[TechnicalSkills.Javascript], SkillsType[SkillsType.Technic]),
+                        new SkillModel(HumanSkills[HumanSkills.Adaptability], SkillsType[SkillsType.Human]),
+                        new SkillModel(HumanSkills[HumanSkills.Autonomy], SkillsType[SkillsType.Human]),
+                        new SkillModel(HumanSkills[HumanSkills.Serious], SkillsType[SkillsType.Human]),
+                        new SkillModel(HumanSkills[HumanSkills.TeamWork], SkillsType[SkillsType.Human])
                     ];
                     details = [
                         "dotnet",

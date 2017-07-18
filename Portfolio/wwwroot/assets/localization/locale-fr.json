@@ -22,7 +22,8 @@
   "common": {
     "backbutton": {
       "backtoprojects": "Retour aux Projets",
-      "backtoskills": "Retour aux Compétences"
+      "backtoskills": "Retour aux Compétences",
+      "backtoskillstype": "Retour aux Catégories de Compétences"
     }
   },
   "contact": {
@@ -153,11 +154,17 @@
     "title": "Mes Projets"
   },
   "skill": {
+    "adaptability": {
+      "name": "Adaptabilité"
+    },
     "angular": {
       "name": "Angular"
     },
     "aspnet": {
       "name": "ASP .Net"
+    },
+    "autonomy": {
+      "name": "Autonomie"
     },
     "csharp": {
       "name": "C#"
@@ -173,6 +180,12 @@
     },
     "sassless": {
       "name": "SASS / LESS"
+    },
+    "serious": {
+      "name": "Sérieux"
+    },
+    "teamwork": {
+      "name": "Travail en Équipe"
     }
   },
   "skill-detail": {

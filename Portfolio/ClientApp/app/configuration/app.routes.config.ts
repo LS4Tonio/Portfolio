@@ -10,6 +10,7 @@ import { SkillsComponent } from "../components/skills/skills.component";
 import { SkillDetailComponent } from "../components/skill-detail/skill-detail.component";
 
 // Child Components
+import { HumanSkillsComponent } from "../components/human-skills/human-skills.component";
 import { TechnicSkillsComponent } from "../components/technic-skills/technic-skills.component";
 
 export const routing = RouterModule.forRoot([
@@ -44,7 +45,7 @@ export const routing = RouterModule.forRoot([
     },
     {
         path: "skills/human",
-        component: TechnicSkillsComponent
+        component: HumanSkillsComponent
     },
     {
         path: "skills/technic",

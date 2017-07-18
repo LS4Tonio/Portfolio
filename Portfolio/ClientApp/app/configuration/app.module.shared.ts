@@ -26,6 +26,7 @@ import { SkillsComponent } from "../components/skills/skills.component";
 import { SkillDetailComponent } from "../components/skill-detail/skill-detail.component";
 
 // Child components import
+import { HumanSkillsComponent } from "../components/human-skills/human-skills.component";
 import { TechnicSkillsComponent } from "../components/technic-skills/technic-skills.component";
 
 export const sharedConfig: NgModule = {
@@ -51,6 +52,7 @@ export const sharedConfig: NgModule = {
         SkillDetailComponent,
 
         // Child components
+        HumanSkillsComponent,
         TechnicSkillsComponent
     ],
     imports: [

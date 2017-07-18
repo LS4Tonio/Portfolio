@@ -3,6 +3,7 @@
     public url: string;
     public imageUrl: string;
     public type: string;
+    public typeId: SkillsType;
     public isQuote: boolean;
     public rating: number;
     public links: string[];
@@ -12,10 +13,64 @@
         let isQuote: boolean = false;
         let rating: number;
         let links: string[] = [];
+        let typeId: SkillsType;
 
         try {
             switch (type.toLowerCase()) {
+                case SkillsType[SkillsType.Human].toLowerCase():
+                    typeId = SkillsType.Human;
+
+                    switch (id.toLowerCase()) {
+                        case HumanSkills[HumanSkills.Adaptability].toLowerCase():
+                            name = "Adaptability";
+                            rating = -1;
+                            links = [
+                                "altecstore",
+                                "gc",
+                                "gleipnir",
+                                "monitoring",
+                                "heliosdashboard"
+                            ];
+                            break;
+                        case HumanSkills[HumanSkills.Autonomy].toLowerCase():
+                            name = "Autonomy";
+                            rating = -1;
+                            links = [
+                                "gc",
+                                "monitoring",
+                                "portfolio",
+                                "heliosdashboard"
+                            ];
+                            break;
+                        case HumanSkills[HumanSkills.Serious].toLowerCase():
+                            name = "Serious";
+                            rating = -1;
+                            links = [
+                                "altecstore",
+                                "gc",
+                                "gleipnir",
+                                "monitoring",
+                                "portfolio",
+                                "heliosdashboard"
+                            ];
+                            break;
+                        case HumanSkills[HumanSkills.TeamWork].toLowerCase():
+                            name = "TeamWork";
+                            rating = -1;
+                            links = [
+                                "altecstore",
+                                "gleipnir",
+                                "heliosdashboard"
+                            ];
+                            break;
+                        default:
+                            throw new Error("Human skill not found");
+                    }
+                    break;
+
                 case SkillsType[SkillsType.Technic].toLowerCase():
+                    typeId = SkillsType.Technic;
+
                     switch (id.toLowerCase()) {
                         case TechnicalSkills[TechnicalSkills.Angular].toLowerCase():
                             name = "Angular";
@@ -98,6 +153,7 @@
         this.url = formatedName;
         this.imageUrl = require(`./../../assets/images/skills/${formatedName}.png`);
         this.type = type.toLowerCase();
+        this.typeId = typeId;
         this.isQuote = isQuote;
         this.rating = rating;
         this.links = links;
@@ -111,7 +167,10 @@ export enum SkillsType {
 }
 
 export enum HumanSkills {
-    None
+    Adaptability,
+    Autonomy,
+    Serious,
+    TeamWork
 }
 
 export enum TechnicalSkills {

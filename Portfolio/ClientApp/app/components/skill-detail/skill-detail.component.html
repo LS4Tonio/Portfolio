@@ -6,8 +6,8 @@
                     <h2>{{'skill.' + skill.url + '.name' | translate:lang}}</h2>
                     <hr class="icon star primary" />
                 </div>
+                <back-button [route]="'/skills/' + skill.type"></back-button>
             </div>
-            <back-button [route]="'/skills/' + skill.type"></back-button>
         </div>
 
         <div class="skill-body">
@@ -20,7 +20,7 @@
             </div>
 
             <div class="row">
-                <div class="col-sm-8 skill-context">
+                <div class="skill-context" [ngClass]="{'col-sm-8': skill.rating && skill.rating > -1 || skill.links.length, 'col-sm-12': !skill.rating || skill.rating < 0 || !skill.links.length}">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mattis nibh in orci condimentum consequat. Donec varius nulla sit amet felis mollis feugiat. Nullam posuere porttitor augue ac ultricies. Vivamus a placerat est. Aliquam imperdiet, erat eget ultricies imperdiet, urna urna luctus quam, non egestas magna ipsum quis nibh. Mauris ut nulla viverra, varius lacus congue, ultrices orci. Aenean a bibendum orci. Curabitur bibendum feugiat nunc non ornare. Donec vitae tincidunt massa. Phasellus leo nibh, consequat congue justo eu, lacinia vehicula metus. Duis convallis urna at risus interdum, quis euismod lectus facilisis. Vestibulum eu lorem id odio blandit semper. Maecenas sed enim sit amet odio aliquam vestibulum. Pellentesque efficitur luctus mauris.</p>
                     <p>Integer fermentum tincidunt urna nec consectetur. Integer nec luctus lorem, consequat tempus eros. Pellentesque tempor, lectus ac rhoncus molestie, magna elit ullamcorper felis, a fermentum urna dolor id lorem. Suspendisse in quam ut nunc fringilla ultricies eu sed ipsum. Mauris eu sollicitudin augue, efficitur luctus tellus. Vestibulum nec aliquam erat, quis feugiat nunc. Quisque vitae malesuada magna, et hendrerit enim. Duis nec consequat nisi, ac vehicula neque. Donec id euismod felis.</p>
                     <p>Integer faucibus, nulla eget ultrices pretium, eros mi aliquam augue, ut pretium ipsum dui congue mi. Morbi dapibus ante nunc, at interdum nisl commodo eget. In dignissim ullamcorper laoreet. Nunc euismod eleifend sem, eu dignissim justo dignissim at. Donec enim magna, semper sed elit convallis, mattis tincidunt nisi. In non lectus et diam scelerisque dapibus. Aliquam varius varius velit, in convallis lorem pulvinar sed. Praesent faucibus felis massa, id sagittis justo iaculis at. Nullam ut sodales orci. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut sed tincidunt lectus. Quisque a imperdiet neque.</p>
@@ -28,8 +28,8 @@
                     <p>Sed vitae cursus lectus. Quisque eros massa, consectetur eget sem sit amet, pulvinar lacinia augue. Duis nec arcu ac mauris viverra faucibus et non elit. Proin id consequat eros. Vestibulum quis orci vitae lacus pulvinar aliquet. In enim ligula, porta ultricies magna eu, accumsan vulputate dui. Ut dignissim nisl in lorem luctus egestas. Cras mattis sagittis diam non ornare. Sed lorem risus, mollis a velit vel, tincidunt volutpat ex. Nulla venenatis laoreet consequat.</p>
                 </div>
 
-                <div class="col-sm-4 skill-links">
-                    <div class="skill-rating">
+                <div class="col-sm-4">
+                    <div class="skill-rating" *ngIf="skill.rating && skill.rating > -1">
                         <div class="row">
                             <div class="col-xs-12">
                                 <h3>{{'skill-detail.rating' | translate:lang}}</h3>
@@ -50,7 +50,7 @@
                             <div class="col-xs-12">
                                 <ul>
                                     <li *ngFor="let link of skill.links">
-                                        <a class="btn btn-outline dark" [routerLink]="['/projects', link]">
+                                        <a class="btn btn-outline info" [routerLink]="['/projects', link]">
                                             {{'project.' + link + '.name' | translate:lang}}
                                         </a>
                                     </li>
@@ -63,7 +63,9 @@
         </div>
 
         <div class="skill-footer">
-            <back-button [displayText]="true" [route]="'/skills/' + skill.type" [text]="'backtoskills'"></back-button>
+            <div class="row">
+                <back-button [displayText]="true" [route]="'/skills/' + skill.type" [text]="'backtoskills'"></back-button>
+            </div>
         </div>
     </div>
 </section>
