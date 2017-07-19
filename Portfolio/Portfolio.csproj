@@ -8,6 +8,7 @@
     <PackageId>Antoine.BIBES.Portfolio</PackageId>
     <Description>My porfolio site powered by ASP.NET Core, Angular and Bootstrap</Description>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageTargetFallback>portable-net45+win8</PackageTargetFallback>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />

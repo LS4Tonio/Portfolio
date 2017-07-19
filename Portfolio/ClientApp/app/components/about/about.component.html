@@ -21,8 +21,8 @@
 
         <div class="row">
             <div class="col-xs-12 text-left">
-                <accordion>
-                    <accordion-group #languagesPanel panelClass="panel-success panel-custom">
+                <accordion [closeOthers]="true">
+                    <accordion-group #languagesPanel [isOpen]="true" panelClass="panel-success panel-custom">
                         <div accordion-heading>
                             <i class="pull-left fa fa-language"></i> <span>{{'about.accordion.languages' | translate:lang}}</span>
                             <i class="pull-right fa" [ngClass]="{'fa-chevron-down': languagesPanel?.isOpen, 'fa-chevron-right': !languagesPanel?.isOpen}"></i>
@@ -33,6 +33,25 @@
                                     <li *ngFor="let l of languages">
                                         <span>{{'localization.' + l | translate:lang}}</span>
                                         <span class="pull-right">{{'about.language.' + l | translate:lang}}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </accordion-group>
+
+                    <accordion-group #educationPanel panelClass="panel-success panel-custom">
+                        <div accordion-heading>
+                            <i class="pull-left fa fa-graduation-cap"></i> <span>{{'about.accordion.education' | translate:lang}}</span>
+                            <i class="pull-right fa" [ngClass]="{'fa-chevron-down': educationPanel?.isOpen, 'fa-chevron-right': !educationPanel?.isOpen}"></i>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <ul>
+                                    <li>
+                                        <i class="fa fa-laptop"></i> <span>{{'about.education.intech' | translate:lang}}</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-calculator"></i> <span>{{'about.education.bac' | translate:lang}}</span>
                                     </li>
                                 </ul>
                             </div>

@@ -4,6 +4,7 @@ import { HttpModule } from "@angular/http";
 import { LocaleService, TranslationService } from "angular-l10n";
 
 import { sharedConfig } from "./configuration/app.module.shared";
+import { WindowRefService } from "./services/window-ref.service";
 
 @NgModule({
     bootstrap: sharedConfig.bootstrap,
@@ -14,7 +15,8 @@ import { sharedConfig } from "./configuration/app.module.shared";
         ...sharedConfig.imports
     ],
     providers: [
-        { provide: "ORIGIN_URL", useValue: location.origin }
+        { provide: "ORIGIN_URL", useValue: location.origin },
+        WindowRefService
     ]
 })
 export class AppModule {

@@ -57,12 +57,7 @@
                     <br />
                     <div class="row">
                         <div class="form-group col-xs-12">
-                            <button class="btn btn-success btn-lg" type="submit" [disabled]="contactForm.invalid">{{'contact.form.button.submit' | translate:lang}}</button>
-                        </div>
-                    </div>
-                    <div *ngIf="formSubmitted" class="row">
-                        <div class="col-xs-12">
-                            <span>{{contactModel | json}}</span>
+                            <button class="btn btn-success btn-lg" type="submit" [disabled]="!captchaValidcontactForm?.invalid">{{'contact.form.button.submit' | translate:lang}}</button>
                         </div>
                     </div>
                 </form>

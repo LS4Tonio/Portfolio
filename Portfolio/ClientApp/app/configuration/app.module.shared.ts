@@ -12,6 +12,7 @@ import { ImageSrcDirective } from "../directives/image-src.directive";
 // Behavior components
 import { BackButtonComponent } from "../components/back-button/back-button.component";
 import { RatingComponent } from "../components/rating/rating.component";
+import { ReCaptchaComponent } from "../components/re-captcha/re-captcha.component";
 
 // Components imports
 import { AboutComponent } from "../components/about/about.component";
@@ -38,6 +39,7 @@ export const sharedConfig: NgModule = {
         // Behavior components
         BackButtonComponent,
         RatingComponent,
+        ReCaptchaComponent,
 
         // Components
         AppComponent,
@@ -58,6 +60,7 @@ export const sharedConfig: NgModule = {
     imports: [
         FormsModule,
         ReactiveFormsModule,
+        ReCaptchaModule,
         routing,
         AccordionModule.forRoot(),
         CollapseModule.forRoot(),
