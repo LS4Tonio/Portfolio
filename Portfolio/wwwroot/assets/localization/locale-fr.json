@@ -11,8 +11,13 @@
     },
     "hobbies": {
       "cinema": "Cinéma",
+      "serie": "Séries TV",
       "sports": "Airsoft",
       "videogames": "Jeux vidéos multijoueurs"
+    },
+    "language": {
+      "en": "TOEIC 865",
+      "fr": "Langue maternelle"
     },
     "title": "Qui suis-je ?",
     "transportation": {

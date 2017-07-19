@@ -9,15 +9,6 @@ import { Language } from "angular-l10n";
 export class SkillsComponent {
     @Language() public lang: string;
 
-    public imgHumanSkill: any = require("./../../../assets/images/skills/human.png");
-    public imgTechSkill: any = require("./../../../assets/images/skills/tech.png");
-
-    constructor() {
-        //var humanSkills = [
-        //    new SkillModel("Serious"),
-        //    new SkillModel("Adaptation"),
-        //    new SkillModel("Autonomy"),
-        //    new SkillModel("Team Work")
-        //];
-    }
+    public imgHumanSkill: string = "skills/human.png";
+    public imgTechSkill: string = "skills/tech.png";
 }

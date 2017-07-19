@@ -154,7 +154,7 @@ export class ProjectModel {
         this.name = name;
         this.company = company;
         this.url = formatedName;
-        this.imageUrl = require(`./../../assets/images/projects/${formatedName}.png`);
+        this.imageUrl = `projects/${formatedName}.png`;
         this.links = links;
         this.details = details;
     }

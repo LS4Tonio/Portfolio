@@ -9,9 +9,9 @@ import { Language } from "angular-l10n";
 export class HomeComponent {
     @Language() public lang: string;
 
-    public imageSrc: any = require("./../../../assets/images/me-colored.jpg");
-    public aboutImgSrc: any = require("./../../../assets/images/me-whited.jpg");
-    public contactImgSrc: any = require("./../../../assets/images/home/contact.png");
-    public projectImgSrc: any = require("./../../../assets/images/home/project.png");
-    public skillImgSrc: any = require("./../../../assets/images/home/skill.png");
+    public imageSrc: string = "me-colored.jpg";
+    public aboutImgSrc: string = "me-whited.jpg";
+    public contactImgSrc: string = "home/contact.png";
+    public projectImgSrc: string = "home/project.png";
+    public skillImgSrc: string = "home/skill.png";
 }

@@ -151,7 +151,7 @@
 
         this.name = name;
         this.url = formatedName;
-        this.imageUrl = require(`./../../assets/images/skills/${formatedName}.png`);
+        this.imageUrl = `skills/${formatedName}.png`;
         this.type = type.toLowerCase();
         this.typeId = typeId;
         this.isQuote = isQuote;

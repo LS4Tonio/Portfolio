@@ -7,7 +7,7 @@ import { LocalizationModule } from "angular-l10n";
 import { routing } from "./app.routes.config";
 
 // Directives imports
-import { OnFocusDirective } from "../directives/on-focus.directive";
+import { ImageSrcDirective } from "../directives/image-src.directive";
 
 // Behavior components
 import { BackButtonComponent } from "../components/back-button/back-button.component";
@@ -33,7 +33,7 @@ export const sharedConfig: NgModule = {
     bootstrap: [AppComponent],
     declarations: [
         // Directives
-        OnFocusDirective,
+        ImageSrcDirective,
 
         // Behavior components
         BackButtonComponent,

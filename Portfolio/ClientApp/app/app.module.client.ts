@@ -19,12 +19,14 @@ import { sharedConfig } from "./configuration/app.module.shared";
 })
 export class AppModule {
     constructor(public locale: LocaleService, public translation: TranslationService) {
+        // Define default site language
         this.locale.addConfiguration()
             .addLanguages(["en", "fr"])
             .setCookieExpiration(30)
             .defineDefaultLocale("fr", "FR")
             .defineLanguage("fr");
 
+        // Enable translations from localization files
         this.translation.addConfiguration()
             .addProvider("./assets/localization/locale-");
         this.translation.init();

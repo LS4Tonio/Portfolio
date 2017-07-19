@@ -17,7 +17,7 @@
             </div>
             <div class="language-selector">
                 <select (ngModelChange)="onLanguageChange($event)" class="form-control" [ngModel]="currentLanguage">
-                    <option *ngFor="let c of cultures" [value]="c.value">{{c.label | translate:lang}}</option>
+                    <option *ngFor="let c of cultures" [value]="c">{{'localization.' + c | translate:lang}}</option>
                 </select>
             </div>
         </div>
