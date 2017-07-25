@@ -2,6 +2,8 @@ import { Component, OnInit } from "@angular/core";
 import { Location, PopStateEvent } from "@angular/common";
 import { NavigationEnd, Router } from "@angular/router";
 
+import { isBrowser } from "../../services/environment";
+
 @Component({
     selector: "app",
     templateUrl: "./app.component.html",
@@ -17,6 +19,14 @@ export class AppComponent implements OnInit {
      * Code from: https://stackoverflow.com/a/44372167
      */
     public ngOnInit(): void {
+        this.subscribeToPageChange();
+    }
+
+    private subscribeToPageChange() {
+        if (!isBrowser) {
+            return; // We're not on the client side
+        }
+
         // Subscribe to the last url
         this._location.subscribe((event: PopStateEvent) => {
             this._lastPoppedUrl = event.url;

@@ -9,6 +9,9 @@ import { sharedConfig } from "./configuration/app.module.shared";
     imports: [
         ServerModule,
         ...sharedConfig.imports
+    ],
+    providers: [
+        ...sharedConfig.providers
     ]
 })
 export class AppModule { }

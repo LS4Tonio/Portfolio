@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Portfolio.Models;
 using Portfolio.Services.Email;
+using System;
 using System.Net;
 
 namespace Portfolio.Controllers
@@ -17,15 +18,22 @@ namespace Portfolio.Controllers
 
         // POST api/values
         [HttpPost]
-        public async void Post(EmailModel email)
+        public async void Post([FromBody] EmailModel email)
         {
-            if (ModelState.IsValid)
+            try
             {
-                await _emailService.SendEmailAsync(email.Name, email.Email, email.Subject, email.Message);
+                if (ModelState.IsValid)
+                {
+                    await _emailService.SendEmailAsync(email.Name, email.Email, email.Subject, email.Message);
+                }
+                else
+                {
+                    Response.StatusCode = (int)HttpStatusCode.BadRequest;
+                }
             }
-            else
+            catch (Exception)
             {
-                Response.StatusCode = (int)HttpStatusCode.BadRequest;
+                Response.StatusCode = (int)HttpStatusCode.InternalServerError;
             }
         }
     }

@@ -1,6 +1,8 @@
 import { Component } from "@angular/core";
 import { Language } from "angular-l10n";
 
+import { ContactService } from "../../services/contact.service";
+
 import { ContactModel } from "../../models/contact.model";
 
 @Component({
@@ -14,11 +16,11 @@ export class ContactComponent {
     public contactModel: ContactModel;
     public emailPattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-    constructor() {
+    constructor(private _contactService: ContactService) {
         this.contactModel = new ContactModel();
     }
 
     public onSubmit() {
-        console.log("Form submitted");
+        this._contactService.postMail(this.contactModel);
     }
 }
