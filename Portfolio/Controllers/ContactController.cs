@@ -11,12 +11,19 @@ namespace Portfolio.Controllers
     {
         private readonly IEmailService _emailService;
 
+        /// <summary>
+        /// Constructor - Initializes the email service
+        /// </summary>
+        /// <param name="emailService">Email service</param>
         public ContactController(IEmailService emailService)
         {
             _emailService = emailService;
         }
 
-        // POST api/values
+        /// <summary>
+        /// Sends a mail
+        /// </summary>
+        /// <param name="email">Email informations</param>
         [HttpPost]
         public async void Post([FromBody] EmailModel email)
         {

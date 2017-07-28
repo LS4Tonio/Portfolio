@@ -1,5 +1,6 @@
 ﻿import { Injectable } from "@angular/core";
-import { Http } from "@angular/http";
+import { Http, Response } from "@angular/http";
+import { Observable } from "rxjs/Observable";
 
 import { ContactModel } from "./../models/contact.model";
 
@@ -7,17 +8,11 @@ import { ContactModel } from "./../models/contact.model";
 export class ContactService {
     constructor(private _http: Http) { }
 
-    public postMail(mail: ContactModel) {
-        this._http
-            .post("/api/contact", mail)
-            .subscribe(this.handleResponse, this.handleError);
-    }
-
-    private handleResponse(value): void {
-        console.log(value.status === 200);
-    }
-
-    private handleError(error: any): void {
-        console.error("Something went wrong!");
+    /**
+     * Sends a mail to me
+     * @param mail
+     */
+    public postMail(mail: ContactModel): Observable<Response> {
+        return this._http.post("/api/contact", mail);
     }
 }

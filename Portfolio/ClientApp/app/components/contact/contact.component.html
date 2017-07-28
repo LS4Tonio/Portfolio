@@ -63,5 +63,8 @@
                 </form>
             </div>
         </div>
+        <div class="alert alert-dismissable alert-danger" *ngIf="emailSent && !messageResult">
+            <span class="text-danger">An error occured. Try again later</span>
+        </div>
     </div>
 </section>
