@@ -59,6 +59,10 @@
         "subject": {
           "maxlength": "The subject should not exceed 144 characters.",
           "required": "Please enter the subject of your message."
+        },
+        "submit": {
+          "error": "An error occured while sending the message. Please try again later.",
+          "success": "You message was sent with success. I will reply as soon as possible."
         }
       }
     },

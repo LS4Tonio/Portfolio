@@ -59,6 +59,10 @@
         "subject": {
           "maxlength": "Le sujet ne doit pas dépasser les 144 caractères.",
           "required": "Veuillez ajouter un sujet pour votre message."
+        },
+        "submit": {
+          "error": "Une erreur est survenue pendant l'envoi du message. Veuillez réessayer ultérieurement.",
+          "success": "Votre message a été envoyé avec succès. Je vous répondrais dès que possible."
         }
       }
     },

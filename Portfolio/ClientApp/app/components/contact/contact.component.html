@@ -54,17 +54,21 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row control-group">
+                        <re-captcha (captchaExpired)="handleCaptchaExpired()" (captchaResponse)="handleCorrectCaptcha($event)" language="lang" site_key="6LcfICsUAAAAAH-VzVKVMRurCo9npQ_LmWylt92p"></re-captcha>
+                    </div>
                     <br />
                     <div class="row">
                         <div class="form-group col-xs-12">
-                            <button class="btn btn-success btn-lg" type="submit" [disabled]="!contactForm.form.valid">{{'contact.form.button.submit' | translate:lang}}</button>
+                            <button class="btn btn-success btn-lg" type="submit" [disabled]="!contactForm.form.valid || !captchaValid">{{'contact.form.button.submit' | translate:lang}}</button>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
-        <div class="alert alert-dismissable alert-danger" *ngIf="emailSent && !messageResult">
-            <span class="text-danger">An error occured. Try again later</span>
+        <div class="alert alert-dismissable" *ngIf="emailSent" [ngClass]="{'alert-danger': emailResult != 200, 'alert-success': emailResult == 200}">
+            <span [hidden]="emailResult == 200" class="text-danger">{{'contact.form.validation.submit.error' | translate:lang}}</span>
+            <span [hidden]="emailResult != 200" class="text-success">{{'contact.form.validation.submit.success' | translate:lang}}</span>
         </div>
     </div>
 </section>
