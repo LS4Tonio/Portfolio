@@ -1,6 +1,8 @@
-﻿import { Injectable, NgZone, Optional, SkipSelf } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+﻿import { Injectable, NgZone, Optional, SkipSelf } from "@angular/core";
+import { Observable } from "rxjs/Observable";
+import { BehaviorSubject } from "rxjs/BehaviorSubject";
+
+import { isBrowser } from "./environment";
 
 /*
  * Common service shared by all reCaptcha component instances
@@ -15,42 +17,52 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
  */
 @Injectable()
 export class ReCaptchaService {
+    private _scriptLoaded = false;
+    private _readySubject: BehaviorSubject<boolean> = new BehaviorSubject(false);
 
-    private scriptLoaded = false;
-    private readySubject: BehaviorSubject<boolean> = new BehaviorSubject(false);
-
+    /**
+     * Binds reCaptcha event
+     * @param zone
+     */
     constructor(zone: NgZone) {
-        /* the callback needs to exist before the API is loaded */
-        window[<any>"reCaptchaOnloadCallback"] = <any>(() => zone.run(this.onloadCallback.bind(this)));
+        if (isBrowser) {
+            /* the callback needs to exist before the API is loaded */
+            window[<any>"reCaptchaOnloadCallback"] = <any>(() => zone.run(this.onloadCallback.bind(this)));
+        }
     }
 
+    /**
+     * Loads the reCaptcha library
+     * @param language selected language
+     */
     public getReady(language: string): Observable<boolean> {
-        if (!this.scriptLoaded) {
-            this.scriptLoaded = true;
-            let doc = <HTMLDivElement>document.body;
-            let script = document.createElement('script');
-            script.innerHTML = '';
-            script.src = 'https://www.google.com/recaptcha/api.js?onload=reCaptchaOnloadCallback&render=explicit' +
-                (language ? '&hl=' + language : '');
+        if (!this._scriptLoaded) {
+            this._scriptLoaded = true;
+            const doc = <HTMLDivElement>document.body;
+            const script = document.createElement("script");
+            const lang = language ? `&hl=${language}` : "";
+
+            script.innerHTML = "";
+            script.src = `https://www.google.com/recaptcha/api.js?onload=reCaptchaOnloadCallback&render=explicit${lang}`;
             script.async = true;
             script.defer = true;
             doc.appendChild(script);
         }
-        return this.readySubject.asObservable();
+        return this._readySubject.asObservable();
     }
 
     private onloadCallback() {
-        this.readySubject.next(true);
+        this._readySubject.next(true);
     }
 }
 
 /* singleton pattern taken from https://github.com/angular/angular/issues/13854 */
-export function RECAPTCHA_SERVICE_PROVIDER_FACTORY(ngZone: NgZone, parentDispatcher: ReCaptchaService) {
+export function recaptchaServiceProviderFactory(ngZone: NgZone, parentDispatcher: ReCaptchaService) {
     return parentDispatcher || new ReCaptchaService(ngZone);
 }
 
-export const RECAPTCHA_SERVICE_PROVIDER = {
+export const recaptchaServiceProvider = {
     provide: ReCaptchaService,
     deps: [NgZone, [new Optional(), new SkipSelf(), ReCaptchaService]],
-    useFactory: RECAPTCHA_SERVICE_PROVIDER_FACTORY
+    useFactory: recaptchaServiceProviderFactory
 };

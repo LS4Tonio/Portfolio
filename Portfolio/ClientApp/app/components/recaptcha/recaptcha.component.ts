@@ -1,19 +1,13 @@
-import {
-    Component,
-    OnInit,
-    Input,
-    Output,
-    EventEmitter,
-    NgZone,
-    ViewChild, ElementRef, forwardRef
-} from '@angular/core';
-import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
-import { ReCaptchaService } from './captcha.service';
+import { Component, OnInit, Input, Output, EventEmitter, NgZone, ViewChild, ElementRef, forwardRef, OnChanges, SimpleChanges } from "@angular/core";
+import { NG_VALUE_ACCESSOR, ControlValueAccessor } from "@angular/forms";
+
+import { isBrowser } from "../../services/environment";
+import { ReCaptchaService } from "../../services/recaptcha.service";
 
 @Component({
-    selector: 'recaptcha',
-    templateUrl: "./recaptcha.component.html",,
-    styleUrls: ["./recaptcha.component.less"]
+    selector: "recaptcha",
+    templateUrl: "./recaptcha.component.html",
+    styleUrls: ["./recaptcha.component.less"],
     providers: [
         {
             provide: NG_VALUE_ACCESSOR,
@@ -22,73 +16,87 @@ import { ReCaptchaService } from './captcha.service';
         }
     ]
 })
-export class ReCaptchaComponent implements OnInit, ControlValueAccessor {
-
-    @Input() site_key: string = null;
-    @Input() theme = 'light';
-    @Input() type = 'image';
-    @Input() size = 'normal';
-    @Input() tabindex = 0;
-    @Input() badge = 'bottomright';
+export class ReCaptchaComponent implements OnInit, ControlValueAccessor, OnChanges {
+    @Input() public siteKey: string = null;
+    @Input() public theme = "light";
+    @Input() public type = "image";
+    @Input() public size = "normal";
+    @Input() public tabindex = 0;
+    @Input() public badge = "bottomright";
     /* Available languages: https://developers.google.com/recaptcha/docs/language */
-    @Input() language: string = null;
+    @Input() public language: string = null;
 
-    @Output() captchaResponse = new EventEmitter<string>();
-    @Output() captchaExpired = new EventEmitter();
+    @Output() public captchaResponse = new EventEmitter<string>();
+    @Output() public captchaExpired = new EventEmitter();
 
-    @ViewChild('target') targetRef: ElementRef;
-    widgetId: any = null;
+    @ViewChild("target") public targetRef: ElementRef;
 
-    onChange: Function = () => {};
-    onTouched: Function = () => {};
+    private _widgetId: any = null;
 
-    constructor(
-        private _zone: NgZone,
-        private _captchaService: ReCaptchaService
-    ) {
-    }
+    public onChange: Function = () => { };
+    public onTouched: Function = () => { };
 
-    ngOnInit() {
+    constructor(private _zone: NgZone, private _captchaService: ReCaptchaService) { }
+
+    public ngOnInit(): void {
         this._captchaService.getReady(this.language)
             .subscribe((ready) => {
-                if (!ready)
+                if (!ready) {
                     return;
-                // noinspection TypeScriptUnresolvedVariable,TypeScriptUnresolvedFunction
-                this.widgetId = (<any>window).grecaptcha.render(this.targetRef.nativeElement, {
-                    'sitekey': this.site_key,
-                    'badge': this.badge,
-                    'theme': this.theme,
-                    'type': this.type,
-                    'size': this.size,
-                    'tabindex': this.tabindex,
-                    'callback': <any>((response: any) => this._zone.run(this.recaptchaCallback.bind(this, response))),
-                    'expired-callback': <any>(() => this._zone.run(this.recaptchaExpiredCallback.bind(this)))
-                });
+                }
+
+                this.init();
             });
     }
 
-    // noinspection JSUnusedGlobalSymbols
-    public reset() {
-        if (this.widgetId === null)
+    public ngOnChanges(changes: SimpleChanges): void {
+        if (changes["language"].previousValue !== changes["language"].currentValue) {
+            this.reset();
+        }
+    }
+
+    public init() {
+        if (!isBrowser) {
             return;
-        // noinspection TypeScriptUnresolvedVariable
-        (<any>window).grecaptcha.reset(this.widgetId);
+        }
+
+        this._widgetId = (<any>window).grecaptcha.render(this.targetRef.nativeElement,
+            {
+                "sitekey": this.siteKey,
+                "badge": this.badge,
+                "theme": this.theme,
+                "type": this.type,
+                "size": this.size,
+                "tabindex": this.tabindex,
+                "callback": <any>((response: any) => this._zone.run(this.recaptchaCallback.bind(this, response))
+                ),
+                "expired-callback": <any>(() => this._zone.run(this.recaptchaExpiredCallback.bind(this)))
+            });
+    }
+
+    public reset() {
+        if (!isBrowser || this._widgetId === null) {
+            return;
+        }
+
+        (<any>window).grecaptcha.reset(this._widgetId);
         this.onChange(null);
     }
 
-    // noinspection JSUnusedGlobalSymbols
     public execute() {
-        if (this.widgetId === null)
+        if (!isBrowser || this._widgetId === null) {
             return;
-        // noinspection TypeScriptUnresolvedVariable
-        (<any>window).grecaptcha.execute(this.widgetId);
+        }
+
+        (<any>window).grecaptcha.execute(this._widgetId);
     }
 
     public getResponse(): string {
-        if (this.widgetId === null)
+        if (!isBrowser || this._widgetId === null) {
             return null;
-        // noinspection TypeScriptUnresolvedVariable
-        return (<any>window).grecaptcha.getResponse(this.widgetId);
+        }
+
+        return (<any>window).grecaptcha.getResponse(this._widgetId);
     }
 
     writeValue(newValue: any): void {

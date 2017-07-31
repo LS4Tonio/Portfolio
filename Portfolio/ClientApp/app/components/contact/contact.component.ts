@@ -1,6 +1,7 @@
 import { Component, ViewChild } from "@angular/core";
 import { Language } from "angular-l10n";
-import { ReCaptchaComponent } from 'angular2-recaptcha';
+
+import { ReCaptchaComponent } from "../recaptcha/recaptcha.component";
 
 import { ContactService } from "../../services/contact.service";
 import { ContactModel } from "../../models/contact.model";

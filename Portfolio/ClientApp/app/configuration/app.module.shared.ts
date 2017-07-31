@@ -8,6 +8,7 @@ import { routing } from "./app.routes.config";
 
 // Services
 import { ContactService } from "../services/contact.service";
+import { ReCaptchaService } from "../services/recaptcha.service";
 
 // Directives imports
 import { ImageSrcDirective } from "../directives/image-src.directive";
@@ -25,6 +26,7 @@ import { HomeComponent } from "../components/home/home.component";
 import { NavMenuComponent } from "../components/navmenu/navmenu.component";
 import { ProjectsComponent } from "../components/projects/projects.component";
 import { ProjectDetailComponent } from "../components/project-detail/project-detail.component";
+import { ReCaptchaComponent } from "../components/recaptcha/recaptcha.component";
 import { SkillsComponent } from "../components/skills/skills.component";
 import { SkillDetailComponent } from "../components/skill-detail/skill-detail.component";
 
@@ -51,6 +53,7 @@ export const sharedConfig: NgModule = {
         NavMenuComponent,
         ProjectsComponent,
         ProjectDetailComponent,
+        ReCaptchaComponent,
         SkillsComponent,
         SkillDetailComponent,
 
@@ -67,6 +70,7 @@ export const sharedConfig: NgModule = {
         LocalizationModule.forRoot()
     ],
     providers: [
-        ContactService
+        ContactService,
+        ReCaptchaService
     ]
 };

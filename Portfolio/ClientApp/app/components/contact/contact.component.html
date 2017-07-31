@@ -55,7 +55,7 @@
                         </div>
                     </div>
                     <div class="row control-group">
-                        <re-captcha (captchaExpired)="handleCaptchaExpired()" (captchaResponse)="handleCorrectCaptcha($event)" language="lang" site_key="6LcfICsUAAAAAH-VzVKVMRurCo9npQ_LmWylt92p"></re-captcha>
+                        <recaptcha (captchaExpired)="handleCaptchaExpired()" (captchaResponse)="handleCorrectCaptcha($event)" [language]="lang" siteKey="6LcfICsUAAAAAH-VzVKVMRurCo9npQ_LmWylt92p"></recaptcha>
                     </div>
                     <br />
                     <div class="row">
