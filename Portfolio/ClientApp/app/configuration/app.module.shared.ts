@@ -19,6 +19,7 @@ import { RatingComponent } from "../components/rating/rating.component";
 
 // Components imports
 import { AboutComponent } from "../components/about/about.component";
+import { AlertComponent } from "../components/alert/alert.component";
 import { AppComponent } from "../components/app/app.component";
 import { ContactComponent } from "../components/contact/contact.component";
 import { FooterComponent } from "../components/footer/footer.component";
@@ -47,6 +48,7 @@ export const sharedConfig: NgModule = {
         // Components
         AppComponent,
         AboutComponent,
+        AlertComponent,
         ContactComponent,
         FooterComponent,
         HomeComponent,

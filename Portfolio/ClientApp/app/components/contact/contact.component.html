@@ -66,9 +66,9 @@
                 </form>
             </div>
         </div>
-        <div class="alert alert-dismissable" *ngIf="emailSent" [ngClass]="{'alert-danger': emailResult != 200, 'alert-success': emailResult == 200}">
+        <alert dismissable="true" [style]="emailResult == 200 ? 'alert-success' : 'alert-danger'">
             <span [hidden]="emailResult == 200" class="text-danger">{{'contact.form.validation.submit.error' | translate:lang}}</span>
             <span [hidden]="emailResult != 200" class="text-success">{{'contact.form.validation.submit.success' | translate:lang}}</span>
-        </div>
+        </alert>
     </div>
 </section>

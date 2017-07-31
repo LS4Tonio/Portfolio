@@ -56,9 +56,5 @@ namespace Portfolio.Controllers
                 Response.StatusCode = (int)HttpStatusCode.InternalServerError;
             }
         }
-
-        private bool CheckUserIsNotARobot(string reCaptchaToken)
-        {
-        }
     }
 }
