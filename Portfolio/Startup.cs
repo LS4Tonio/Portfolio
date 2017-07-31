@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Portfolio.Services.Email;
+using Portfolio.Services.ReCaptcha;
 
 namespace Portfolio
 {
@@ -29,7 +30,11 @@ namespace Portfolio
             services.Configure<EmailConfiguration>(Configuration.GetSection("Email"));
             services.AddTransient<IEmailService, EmailService>();
 
-            // Add framework services.
+            // Add recaptcha service
+            services.Configure<ReCaptchaConfiguration>(Configuration.GetSection("ReCaptcha"));
+            services.AddTransient<IReCaptchaService, ReCaptchaService>();
+
+            // Add framework services
             services.AddMvc();
         }
 

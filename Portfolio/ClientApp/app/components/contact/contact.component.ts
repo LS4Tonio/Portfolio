@@ -33,6 +33,7 @@ export class ContactComponent {
      * Resets the captcha when expire
      */
     public handleCaptchaExpired(): void {
+        this.captchaValid = false;
         this._captcha.reset();
     }
 
@@ -40,7 +41,8 @@ export class ContactComponent {
      * Allows user to valid it's form when captcha is correct
      * @param token response token
      */
-    public handleCorrectCaptcha(token) {
+    public handleCorrectCaptcha(token: string) {
+        this.contactModel.token = token;
         this.captchaValid = !!token;
     }
 
@@ -54,7 +56,8 @@ export class ContactComponent {
             .postMail(this.contactModel)
             .subscribe(this.handleResponse, this.handleError);
 
-        this._captcha.reset();
+        this.handleCaptchaExpired();
+        this.contactModel = new ContactModel();
     }
 
     /**

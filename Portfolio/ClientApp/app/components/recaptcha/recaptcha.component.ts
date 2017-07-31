@@ -39,39 +39,37 @@ export class ReCaptchaComponent implements OnInit, ControlValueAccessor, OnChang
     constructor(private _zone: NgZone, private _captchaService: ReCaptchaService) { }
 
     public ngOnInit(): void {
+        if (!isBrowser) {
+            return;
+        }
+
         this._captchaService.getReady(this.language)
             .subscribe((ready) => {
                 if (!ready) {
                     return;
                 }
 
-                this.init();
+                this._widgetId = (<any>window).grecaptcha.render(this.targetRef.nativeElement,
+                    {
+                        "sitekey": this.siteKey,
+                        "badge": this.badge,
+                        "theme": this.theme,
+                        "type": this.type,
+                        "size": this.size,
+                        "tabindex": this.tabindex,
+                        "callback": <any>((response: any) => this._zone.run(this.recaptchaCallback.bind(this, response))),
+                        "expired-callback": <any>(() => this._zone.run(this.recaptchaExpiredCallback.bind(this)))
+                    });
             });
     }
 
     public ngOnChanges(changes: SimpleChanges): void {
-        if (changes["language"].previousValue !== changes["language"].currentValue) {
+        const languageChanged = changes["language"];
+
+        if (languageChanged.previousValue !== languageChanged.currentValue) {
+            this.language = languageChanged.currentValue;
             this.reset();
         }
-    }
-
-    public init() {
-        if (!isBrowser) {
-            return;
-        }
-
-        this._widgetId = (<any>window).grecaptcha.render(this.targetRef.nativeElement,
-            {
-                "sitekey": this.siteKey,
-                "badge": this.badge,
-                "theme": this.theme,
-                "type": this.type,
-                "size": this.size,
-                "tabindex": this.tabindex,
-                "callback": <any>((response: any) => this._zone.run(this.recaptchaCallback.bind(this, response))
-                ),
-                "expired-callback": <any>(() => this._zone.run(this.recaptchaExpiredCallback.bind(this)))
-            });
     }
 
     public reset() {
@@ -99,15 +97,15 @@ export class ReCaptchaComponent implements OnInit, ControlValueAccessor, OnChang
         return (<any>window).grecaptcha.getResponse(this._widgetId);
     }
 
-    writeValue(newValue: any): void {
+    public writeValue(newValue: any): void {
         /* ignore it */
     }
 
-    registerOnChange(fn: any): void {
+    public registerOnChange(fn: any): void {
         this.onChange = fn;
     }
 
-    registerOnTouched(fn: any): void {
+    public registerOnTouched(fn: any): void {
         this.onTouched = fn;
     }
 

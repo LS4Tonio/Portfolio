@@ -16,7 +16,7 @@ namespace Portfolio.Services.Email
         /// <summary>
         /// Constructor - get email configuration
         /// </summary>
-        /// <param name="emailConfig"></param>
+        /// <param name="emailConfig">SMTP configuration</param>
         public EmailService(IOptions<EmailConfiguration> emailConfig)
         {
             _emailConfig = emailConfig.Value;
