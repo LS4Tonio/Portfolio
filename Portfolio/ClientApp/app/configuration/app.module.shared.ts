@@ -15,6 +15,7 @@ import { ImageSrcDirective } from "../directives/image-src.directive";
 
 // Behavior components
 import { BackButtonComponent } from "../components/back-button/back-button.component";
+import { HelpBlockValidationComponent } from "../components/help-block-validation/help-block-validation.component";
 import { RatingComponent } from "../components/rating/rating.component";
 
 // Components imports
@@ -43,6 +44,7 @@ export const sharedConfig: NgModule = {
 
         // Behavior components
         BackButtonComponent,
+        HelpBlockValidationComponent,
         RatingComponent,
 
         // Components
