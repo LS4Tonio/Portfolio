@@ -33,9 +33,6 @@
     <Content Include="wwwroot\assets\localization\locale-en.json" />
     <Content Include="wwwroot\assets\localization\locale-fr.json" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ClientApp\app\components\recaptcha\" />
-  </ItemGroup>
   <Target Name="RunWebpack" AfterTargets="ComputeFilesToPublish">
     <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
     <Exec Command="npm install" />
