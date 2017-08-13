@@ -39,6 +39,9 @@ import { HumanSkillsComponent } from "../components/human-skills/human-skills.co
 import { TechnicSkillsComponent } from "../components/technic-skills/technic-skills.component";
 
 // Skills component templates
+import { SkillAdaptabilityComponent } from "../components/skill/adaptability/skill-adaptability.component";
+import { SkillAutonomyComponent } from "../components/skill/autonomy/skill-autonomy.component";
+import { SkillSeriousComponent } from "../components/skill/serious/skill-serious.component";
 import { SkillTeamworkComponent } from "../components/skill/teamwork/skill-teamwork.component";
 
 export const sharedConfig: NgModule = {
@@ -73,6 +76,9 @@ export const sharedConfig: NgModule = {
         TechnicSkillsComponent,
 
         // Skills components templates
+        SkillAdaptabilityComponent,
+        SkillAutonomyComponent,
+        SkillSeriousComponent,
         SkillTeamworkComponent
     ],
     imports: [

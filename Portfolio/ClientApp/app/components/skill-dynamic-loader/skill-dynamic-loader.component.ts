@@ -1,17 +1,28 @@
 ﻿import { AfterViewInit, Component, ComponentFactoryResolver, Input, Type, ViewChild } from "@angular/core";
 
+import { SkillAdaptabilityComponent } from "../skill/adaptability/skill-adaptability.component";
+import { SkillAutonomyComponent } from "../skill/autonomy/skill-autonomy.component";
+import { SkillSeriousComponent } from "../skill/serious/skill-serious.component";
 import { SkillTeamworkComponent } from "../skill/teamwork/skill-teamwork.component";
 
 import { ComponentHostDirective } from "../../directives/component-host.directive";
 import { SkillModel } from "../../models/skill.model";
 
 @Component({
-    entryComponents: [SkillTeamworkComponent],
+    entryComponents: [
+        SkillAdaptabilityComponent,
+        SkillAutonomyComponent,
+        SkillSeriousComponent,
+        SkillTeamworkComponent
+    ],
     selector: "skill-dynamic-loader",
     template: "<template component-host></template>"
 })
 export class SkillDynamicLoaderComponent implements AfterViewInit {
     private _skillsComponents: any = {
+        "adaptability": SkillAdaptabilityComponent,
+        "autonomy": SkillAutonomyComponent,
+        "serious": SkillSeriousComponent,
         "teamwork": SkillTeamworkComponent
     };
 
@@ -26,7 +37,6 @@ export class SkillDynamicLoaderComponent implements AfterViewInit {
 
     private loadSkillComponent(): void {
         const component = this.findSkillComponentFromId(this.skill.url);
-        console.log(component);
         const factory = this._componentResolver.resolveComponentFactory(component);
 
         const viewContainerRef = this._skillHost.viewContainerRef;
