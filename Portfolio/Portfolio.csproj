@@ -33,10 +33,6 @@
     <Content Include="wwwroot\assets\localization\locale-en.json" />
     <Content Include="wwwroot\assets\localization\locale-fr.json" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ClientApp\assets\skills\human\" />
-    <Folder Include="ClientApp\assets\skills\technic\" />
-  </ItemGroup>
   <Target Name="RunWebpack" AfterTargets="ComputeFilesToPublish">
     <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
     <Exec Command="npm install" />

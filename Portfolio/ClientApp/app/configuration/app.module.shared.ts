@@ -11,6 +11,7 @@ import { ContactService } from "../services/contact.service";
 import { ReCaptchaService } from "../services/recaptcha.service";
 
 // Directives imports
+import { ComponentHostDirective } from "../directives/component-host.directive";
 import { ImageSrcDirective } from "../directives/image-src.directive";
 
 // Behavior components
@@ -31,15 +32,20 @@ import { ProjectDetailComponent } from "../components/project-detail/project-det
 import { ReCaptchaComponent } from "../components/recaptcha/recaptcha.component";
 import { SkillsComponent } from "../components/skills/skills.component";
 import { SkillDetailComponent } from "../components/skill-detail/skill-detail.component";
+import { SkillDynamicLoaderComponent } from "../components/skill-dynamic-loader/skill-dynamic-loader.component";
 
 // Child components import
 import { HumanSkillsComponent } from "../components/human-skills/human-skills.component";
 import { TechnicSkillsComponent } from "../components/technic-skills/technic-skills.component";
 
+// Skills component templates
+import { SkillTeamworkComponent } from "../components/skill/teamwork/skill-teamwork.component";
+
 export const sharedConfig: NgModule = {
     bootstrap: [AppComponent],
     declarations: [
         // Directives
+        ComponentHostDirective,
         ImageSrcDirective,
 
         // Behavior components
@@ -60,10 +66,14 @@ export const sharedConfig: NgModule = {
         ReCaptchaComponent,
         SkillsComponent,
         SkillDetailComponent,
+        SkillDynamicLoaderComponent,
 
         // Child components
         HumanSkillsComponent,
-        TechnicSkillsComponent
+        TechnicSkillsComponent,
+
+        // Skills components templates
+        SkillTeamworkComponent
     ],
     imports: [
         FormsModule,
