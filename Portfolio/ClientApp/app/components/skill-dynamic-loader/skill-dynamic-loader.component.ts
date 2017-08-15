@@ -10,6 +10,7 @@ import { SkillJavascriptComponent } from "../skill/javascript/skill-javascript.c
 import { SkillSasslessComponent } from "../skill/sassless/skill-sassless.component";
 import { SkillSeriousComponent } from "../skill/serious/skill-serious.component";
 import { SkillTeamworkComponent } from "../skill/teamwork/skill-teamwork.component";
+import { SkillNotfoundComponent } from "../skill/notfound/skill-notfound.component";
 
 import { ComponentHostDirective } from "../../directives/component-host.directive";
 import { SkillModel } from "../../models/skill.model";
@@ -25,10 +26,11 @@ import { SkillModel } from "../../models/skill.model";
         SkillJavascriptComponent,
         SkillSasslessComponent,
         SkillSeriousComponent,
-        SkillTeamworkComponent
+        SkillTeamworkComponent,
+        SkillNotfoundComponent
     ],
     selector: "skill-dynamic-loader",
-    template: "<template component-host></template>"
+    template: "<ng-template component-host></ng-template>"
 })
 export class SkillDynamicLoaderComponent implements AfterViewInit {
     private _skillsComponents: any = {
@@ -41,7 +43,8 @@ export class SkillDynamicLoaderComponent implements AfterViewInit {
         "javascript": SkillJavascriptComponent,
         "sassless": SkillSasslessComponent,
         "serious": SkillSeriousComponent,
-        "teamwork": SkillTeamworkComponent
+        "teamwork": SkillTeamworkComponent,
+        "notfound": SkillNotfoundComponent
     };
 
     @Input() public skill: SkillModel;

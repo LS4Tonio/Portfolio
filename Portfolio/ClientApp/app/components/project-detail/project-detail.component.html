@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h2>{{'project.' + project.url + '.name' | translate:lang}}</h2>
-                    <hr class="icon bookmark primary" />
+                    <hr class="icon bookmark primary"/>
                 </div>
             </div>
             <back-button [route]="'/projects'"></back-button>
@@ -13,18 +13,14 @@
         <div class="project-body">
             <div class="row">
                 <div class="project-context" [ngClass]="{'col-sm-8': project.links.length, 'col-sm-12': !project.links.length}">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mattis nibh in orci condimentum consequat. Donec varius nulla sit amet felis mollis feugiat. Nullam posuere porttitor augue ac ultricies. Vivamus a placerat est. Aliquam imperdiet, erat eget ultricies imperdiet, urna urna luctus quam, non egestas magna ipsum quis nibh. Mauris ut nulla viverra, varius lacus congue, ultrices orci. Aenean a bibendum orci. Curabitur bibendum feugiat nunc non ornare. Donec vitae tincidunt massa. Phasellus leo nibh, consequat congue justo eu, lacinia vehicula metus. Duis convallis urna at risus interdum, quis euismod lectus facilisis. Vestibulum eu lorem id odio blandit semper. Maecenas sed enim sit amet odio aliquam vestibulum. Pellentesque efficitur luctus mauris.</p>
-                    <p>Integer fermentum tincidunt urna nec consectetur. Integer nec luctus lorem, consequat tempus eros. Pellentesque tempor, lectus ac rhoncus molestie, magna elit ullamcorper felis, a fermentum urna dolor id lorem. Suspendisse in quam ut nunc fringilla ultricies eu sed ipsum. Mauris eu sollicitudin augue, efficitur luctus tellus. Vestibulum nec aliquam erat, quis feugiat nunc. Quisque vitae malesuada magna, et hendrerit enim. Duis nec consequat nisi, ac vehicula neque. Donec id euismod felis.</p>
-                    <p>Integer faucibus, nulla eget ultrices pretium, eros mi aliquam augue, ut pretium ipsum dui congue mi. Morbi dapibus ante nunc, at interdum nisl commodo eget. In dignissim ullamcorper laoreet. Nunc euismod eleifend sem, eu dignissim justo dignissim at. Donec enim magna, semper sed elit convallis, mattis tincidunt nisi. In non lectus et diam scelerisque dapibus. Aliquam varius varius velit, in convallis lorem pulvinar sed. Praesent faucibus felis massa, id sagittis justo iaculis at. Nullam ut sodales orci. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut sed tincidunt lectus. Quisque a imperdiet neque.</p>
-                    <p>Sed viverra, nibh volutpat aliquam faucibus, augue arcu porttitor ex, in molestie augue mauris vitae dui. In sagittis nisi et mollis aliquam. Donec ultricies lobortis eros, id aliquam nulla accumsan condimentum. Phasellus dui arcu, rhoncus eu augue ac, iaculis suscipit dolor. Sed bibendum, orci et vestibulum rutrum, dui sapien eleifend quam, a volutpat dolor ipsum a elit. Phasellus lacus nisi, blandit a posuere et, ornare ut odio. Nulla facilisi.</p>
-                    <p>Sed vitae cursus lectus. Quisque eros massa, consectetur eget sem sit amet, pulvinar lacinia augue. Duis nec arcu ac mauris viverra faucibus et non elit. Proin id consequat eros. Vestibulum quis orci vitae lacus pulvinar aliquet. In enim ligula, porta ultricies magna eu, accumsan vulputate dui. Ut dignissim nisl in lorem luctus egestas. Cras mattis sagittis diam non ornare. Sed lorem risus, mollis a velit vel, tincidunt volutpat ex. Nulla venenatis laoreet consequat.</p>
+                    <project-dynamic-loader [project]="project"></project-dynamic-loader>
                 </div>
                 <div class="col-sm-4">
                     <div class="project-links" *ngIf="project.links.length">
                         <div class="row">
                             <div class="col-xs-12">
                                 <h3>{{'project-detail.skills' | translate:lang}}</h3>
-                                <hr class="icon star primary" />
+                                <hr class="icon star primary"/>
                             </div>
                         </div>
                         <div class="row">
@@ -44,7 +40,7 @@
                         <div class="row">
                             <div class="col-xs-12">
                                 <h3>{{'project-detail.details.label' | translate:lang}}</h3>
-                                <hr class="icon info primary" />
+                                <hr class="icon info primary"/>
                             </div>
                         </div>
                         <div class="row">

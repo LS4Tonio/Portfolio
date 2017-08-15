@@ -59,6 +59,49 @@ export class ProjectModel {
                         "sqlserver"
                     ];
                     break;
+                case Projects[Projects.Gleipnir].toLowerCase():
+                    name = "Gleipnir";
+                    company = "IN'TECH";
+                    links = [
+                        new SkillModel(TechnicalSkills[TechnicalSkills.CSharp], SkillsType[SkillsType.Technic]),
+                        new SkillModel(HumanSkills[HumanSkills.Adaptability], SkillsType[SkillsType.Human]),
+                        new SkillModel(HumanSkills[HumanSkills.Serious], SkillsType[SkillsType.Human]),
+                        new SkillModel(HumanSkills[HumanSkills.TeamWork], SkillsType[SkillsType.Human])
+                    ];
+                    details = [
+                        "dotnet",
+                        "csharp",
+                        "winform",
+                        "gitmaster",
+                        "team3",
+                        "teamleader"
+                    ];
+                    break;
+                case Projects[Projects.HeliosDashboard].toLowerCase():
+                    name = "Helios Dashboard";
+                    company = "Schlumberger";
+                    links = [
+                        new SkillModel(TechnicalSkills[TechnicalSkills.CSharp], SkillsType[SkillsType.Technic]),
+                        new SkillModel(TechnicalSkills[TechnicalSkills.AspNet], SkillsType[SkillsType.Technic]),
+                        new SkillModel(TechnicalSkills[TechnicalSkills.Angular], SkillsType[SkillsType.Technic]),
+                        new SkillModel(TechnicalSkills[TechnicalSkills.SassLess], SkillsType[SkillsType.Technic]),
+                        new SkillModel(TechnicalSkills[TechnicalSkills.HtmlCss], SkillsType[SkillsType.Technic]),
+                        new SkillModel(TechnicalSkills[TechnicalSkills.Javascript], SkillsType[SkillsType.Technic]),
+                        new SkillModel(HumanSkills[HumanSkills.Adaptability], SkillsType[SkillsType.Human]),
+                        new SkillModel(HumanSkills[HumanSkills.Autonomy], SkillsType[SkillsType.Human]),
+                        new SkillModel(HumanSkills[HumanSkills.Serious], SkillsType[SkillsType.Human]),
+                        new SkillModel(HumanSkills[HumanSkills.TeamWork], SkillsType[SkillsType.Human])
+                    ];
+                    details = [
+                        "dotnet",
+                        "csharp",
+                        "aspnetcore",
+                        "signalr",
+                        "angularjs",
+                        "jquery",
+                        "sass"
+                    ];
+                    break;
                 case Projects[Projects.Monitoring].toLowerCase():
                     name = "Monitoring Tool";
                     company = "France Media Monde";
@@ -76,24 +119,6 @@ export class ProjectModel {
                         "csharp",
                         "aspnet",
                         "jquery"
-                    ];
-                    break;
-                case Projects[Projects.Gleipnir].toLowerCase():
-                    name = "Gleipnir";
-                    company = "IN'TECH";
-                    links = [
-                        new SkillModel(TechnicalSkills[TechnicalSkills.CSharp], SkillsType[SkillsType.Technic]),
-                        new SkillModel(HumanSkills[HumanSkills.Adaptability], SkillsType[SkillsType.Human]),
-                        new SkillModel(HumanSkills[HumanSkills.Serious], SkillsType[SkillsType.Human]),
-                        new SkillModel(HumanSkills[HumanSkills.TeamWork], SkillsType[SkillsType.Human])
-                    ];
-                    details = [
-                        "dotnet",
-                        "csharp",
-                        "winform",
-                        "gitmaster",
-                        "team3",
-                        "teamleader"
                     ];
                     break;
                 case Projects[Projects.Portfolio].toLowerCase():
@@ -116,36 +141,14 @@ export class ProjectModel {
                         "typescript"
                     ];
                     break;
-                case Projects[Projects.HeliosDashboard].toLowerCase():
-                    name = "Helios Dashboard";
-                    company = "Schlumberger";
-                    links = [
-                        new SkillModel(TechnicalSkills[TechnicalSkills.CSharp], SkillsType[SkillsType.Technic]),
-                        new SkillModel(TechnicalSkills[TechnicalSkills.AspNet], SkillsType[SkillsType.Technic]),
-                        new SkillModel(TechnicalSkills[TechnicalSkills.Angular], SkillsType[SkillsType.Technic]),
-                        new SkillModel(TechnicalSkills[TechnicalSkills.SassLess], SkillsType[SkillsType.Technic]),
-                        new SkillModel(TechnicalSkills[TechnicalSkills.HtmlCss], SkillsType[SkillsType.Technic]),
-                        new SkillModel(TechnicalSkills[TechnicalSkills.Javascript], SkillsType[SkillsType.Technic]),
-                        new SkillModel(HumanSkills[HumanSkills.Adaptability], SkillsType[SkillsType.Human]),
-                        new SkillModel(HumanSkills[HumanSkills.Autonomy], SkillsType[SkillsType.Human]),
-                        new SkillModel(HumanSkills[HumanSkills.Serious], SkillsType[SkillsType.Human]),
-                        new SkillModel(HumanSkills[HumanSkills.TeamWork], SkillsType[SkillsType.Human])
-                    ];
-                    details = [
-                        "dotnet",
-                        "csharp",
-                        "aspnetcore",
-                        "angularjs",
-                        "jquery"
-                    ];
-                    break;
-
                 default:
                     throw new Error("Project not found");
             }
         } catch (e) {
             this.name = "Not found";
             this.url = "notfound";
+            this.links = [];
+            this.details = [];
             return;
         }
 

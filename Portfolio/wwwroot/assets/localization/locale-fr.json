@@ -148,6 +148,7 @@
     "description": "Description",
     "details": {
       "angular": "Angular 4",
+      "angularjs": "Angular JS",
       "aspnet": "ASP .Net",
       "aspnetcore": "ASP .Net Core",
       "csharp": "C#",
@@ -155,6 +156,9 @@
       "gitmaster": "Git master",
       "jquery": "jQuery",
       "label": "Détails",
+      "less": "LESS",
+      "sass": "SASS",
+      "signalr": "SignalR",
       "sqlserver": "SQL Server",
       "team3": "Equipe de 3 personnes",
       "teamleader": "Chef de projet",

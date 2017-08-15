@@ -1,0 +1,28 @@
+﻿<h3>Un dashboard de monitoring</h3>
+<p>
+    Helios Dashboard est une <b>application Web de monitoring</b>, ou <i>visualisation de données</i>, personnalisable pour des équipements situés sur des plateformes pétrolières pour <a href="http://www.slb.com/" target="_blank">Schlumberger</a>.<br/>
+    Les données doivent être affichées en <b>temps réel</b> pour que les opérateurs travaillants sur ces plateformes puissent réagir rapidement en cas de problème.
+</p>
+<p>
+    Pour ce projet, j’ai dû développer un système de <b>style personnalisable et rapidement modifiable</b>.
+    J’ai également développé une <b>interface et une administration de vues</b>.
+    Une vue étant une page Web permettant de <b>configurer les données à afficher</b> via des widgets.
+    J’ai créé ces <b>widgets</b>, des <i>composants avec un comportement spécifique</i>, pour l’affichage des données en temps réel.
+    On y trouve des <i>graphiques</i>, des <i>jauges</i>, des <i>tableaux</i>, de la visualisation de <i>vidéo</i> et d’<i>image</i>.
+</p>
+<p>
+    Un des enjeux de l’application est la <b>mise à jour en temps réel des informations</b> affichées sous différents formats à l’aide des widgets.
+    Cet affichage dynamique est possible à l’aide d’<a href="https://angularjs.org/" target="_blank">AngularJS</a> et <a href="https://www.asp.net/signalr" target="_blank">SignalR</a>.<br/>
+    Le deuxième enjeu est de faire fonctionner l’application dans un <b>navigateur sur une tablette</b>.
+    Il m’a fallu trouver des solutions afin d’<b>optimiser</b> et <b>réduire le temps de traitement</b> pour <i>fluidifier</i> l’utilisation du site Web sur la tablette.
+</p>
+<p>
+    Le premier défi lors du développement de l’application a été de mettre en place le <i>système de widgets avec leur placement et redimensionnement</i> dans une zone prédéfinie sur la page Web.<br/>
+    Le deuxième défi fut l’<i>optimisation de l’application</i> pour une utilisation sur tablette.
+    Le client nous en avait fourni une afin que nous puissions tester.
+    L’application fonctionnait très bien sur l’ordinateur de développement mais lorsqu’il s’agissait du fonctionnement sur la tablette, tout était jusqu’à <i>cinq fois plus lent</i>.
+</p>
+<p>
+    Pour finir, si je devais refaire ce projet, je commencerais par faire une nouvelle <b>architecture</b> qui prends en compte les performances de la tablette dès le début du développement.<br/>
+    De plus, je veillerais à <b>minimiser les actions couteuses</b> en ressources côté client et les réaliser du côté serveur.
+</p>

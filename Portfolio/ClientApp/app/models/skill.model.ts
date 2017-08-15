@@ -144,6 +144,7 @@
         } catch (e) {
             this.name = "Not found";
             this.url = "notfound";
+            this.links = [];
             return;
         }
 
