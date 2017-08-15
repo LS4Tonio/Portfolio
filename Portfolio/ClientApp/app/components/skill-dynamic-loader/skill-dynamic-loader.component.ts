@@ -1,7 +1,13 @@
 ﻿import { AfterViewInit, Component, ComponentFactoryResolver, Input, Type, ViewChild } from "@angular/core";
 
 import { SkillAdaptabilityComponent } from "../skill/adaptability/skill-adaptability.component";
+import { SkillAngularComponent } from "../skill/angular/skill-angular.component";
+import { SkillAspnetComponent } from "../skill/aspnet/skill-aspnet.component";
 import { SkillAutonomyComponent } from "../skill/autonomy/skill-autonomy.component";
+import { SkillCsharpComponent } from "../skill/csharp/skill-csharp.component";
+import { SkillHtmlcssComponent } from "../skill/htmlcss/skill-htmlcss.component";
+import { SkillJavascriptComponent } from "../skill/javascript/skill-javascript.component";
+import { SkillSasslessComponent } from "../skill/sassless/skill-sassless.component";
 import { SkillSeriousComponent } from "../skill/serious/skill-serious.component";
 import { SkillTeamworkComponent } from "../skill/teamwork/skill-teamwork.component";
 
@@ -11,7 +17,13 @@ import { SkillModel } from "../../models/skill.model";
 @Component({
     entryComponents: [
         SkillAdaptabilityComponent,
+        SkillAngularComponent,
+        SkillAspnetComponent,
         SkillAutonomyComponent,
+        SkillCsharpComponent,
+        SkillHtmlcssComponent,
+        SkillJavascriptComponent,
+        SkillSasslessComponent,
         SkillSeriousComponent,
         SkillTeamworkComponent
     ],
@@ -21,7 +33,13 @@ import { SkillModel } from "../../models/skill.model";
 export class SkillDynamicLoaderComponent implements AfterViewInit {
     private _skillsComponents: any = {
         "adaptability": SkillAdaptabilityComponent,
+        "angular": SkillAngularComponent,
+        "aspnet": SkillAspnetComponent,
         "autonomy": SkillAutonomyComponent,
+        "csharp": SkillCsharpComponent,
+        "htmlcss": SkillHtmlcssComponent,
+        "javascript": SkillJavascriptComponent,
+        "sassless": SkillSasslessComponent,
         "serious": SkillSeriousComponent,
         "teamwork": SkillTeamworkComponent
     };

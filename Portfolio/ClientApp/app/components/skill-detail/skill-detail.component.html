@@ -11,14 +11,6 @@
         </div>
 
         <div class="skill-body">
-            <div *ngIf="skill.isQuote" class="row quote-container">
-                <div class="col-xs-12">
-                    <i class="fa fa-3x fa-quote-left pull-left"></i>
-                    <p class="quote">{{'skill.' + skill.url + '.quote' | translate:lang}}</p>
-                    <i class="fa fa-3x fa-quote-right pull-right"></i>
-                </div>
-            </div>
-
             <div class="row">
                 <div class="skill-context" [ngClass]="{'col-sm-8': skill.rating && skill.rating > -1 || skill.links.length, 'col-sm-12': !skill.rating || skill.rating < 0 || !skill.links.length}">
                     <skill-dynamic-loader [skill]="skill"></skill-dynamic-loader>

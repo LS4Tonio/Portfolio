@@ -40,7 +40,13 @@ import { TechnicSkillsComponent } from "../components/technic-skills/technic-ski
 
 // Skills component templates
 import { SkillAdaptabilityComponent } from "../components/skill/adaptability/skill-adaptability.component";
+import { SkillAngularComponent } from "../components/skill/angular/skill-angular.component";
+import { SkillAspnetComponent } from "../components/skill/aspnet/skill-aspnet.component";
 import { SkillAutonomyComponent } from "../components/skill/autonomy/skill-autonomy.component";
+import { SkillCsharpComponent } from "../components/skill/csharp/skill-csharp.component";
+import { SkillHtmlcssComponent } from "../components/skill/htmlcss/skill-htmlcss.component";
+import { SkillJavascriptComponent } from "../components/skill/javascript/skill-javascript.component";
+import { SkillSasslessComponent } from "../components/skill/sassless/skill-sassless.component";
 import { SkillSeriousComponent } from "../components/skill/serious/skill-serious.component";
 import { SkillTeamworkComponent } from "../components/skill/teamwork/skill-teamwork.component";
 
@@ -77,7 +83,13 @@ export const sharedConfig: NgModule = {
 
         // Skills components templates
         SkillAdaptabilityComponent,
+        SkillAngularComponent,
+        SkillAspnetComponent,
         SkillAutonomyComponent,
+        SkillCsharpComponent,
+        SkillHtmlcssComponent,
+        SkillJavascriptComponent,
+        SkillSasslessComponent,
         SkillSeriousComponent,
         SkillTeamworkComponent
     ],
