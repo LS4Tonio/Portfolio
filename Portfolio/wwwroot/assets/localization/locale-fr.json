@@ -6,10 +6,6 @@
       "languages": "Langues",
       "transportation": "Transport"
     },
-    "description": {
-      "background": "Je m’appelle Antoine BIBES, j’ai {{age}} ans et je possède un diplôme d’expert en ingénierie du logiciel, obtenu dans l’école supérieure d’ingénierie informatique IN’TECH du Groupe ESIEA.",
-      "today": "Aujourd’hui, j’entre dans la vie active et le milieu professionnel, afin de développer mon expérience et mes compétences."
-    },
     "education": {
       "bac": "Baccalauréat technologique (STI) spécialité Électronique",
       "intech": "Expert en ingénierie du Logiciel - RNCP niveau 1"

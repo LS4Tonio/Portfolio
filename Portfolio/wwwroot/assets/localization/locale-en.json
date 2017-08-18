@@ -6,10 +6,6 @@
       "languages": "Languages",
       "transportation": "Transportation"
     },
-    "description": {
-      "background": "I am Antoine BIBES, {{age}} years old and I am graduated from IN'TECH of Group ESIEA.",
-      "today": "Today I join the active life and professional work for improve my experience and my skills."
-    },
     "education": {
       "bac": "Baccalauréat technologic (STI) specialty Electronics",
       "intech": "Expert in Software engineering - RNCP level 1"
