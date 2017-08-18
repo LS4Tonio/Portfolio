@@ -23,6 +23,7 @@ import { SkillDynamicLoaderComponent } from "../components/skill-dynamic-loader/
 
 // Components imports
 import { AboutComponent } from "../components/about/about.component";
+import { AboutMeComponent } from "../components/about/about-me.component";
 import { AlertComponent } from "../components/alert/alert.component";
 import { AppComponent } from "../components/app/app.component";
 import { ContactComponent } from "../components/contact/contact.component";
@@ -78,6 +79,7 @@ export const sharedConfig: NgModule = {
         // Components
         AppComponent,
         AboutComponent,
+        AboutMeComponent,
         AlertComponent,
         ContactComponent,
         FooterComponent,
