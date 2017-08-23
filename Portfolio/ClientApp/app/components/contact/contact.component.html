@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h1>{{'contact.title' | translate:lang}}</h1>
-                <hr class="icon envelope primary"/>
+                <hr class="icon envelope primary" />
             </div>
         </div>
         <alert dismissable="true" [style]="emailResult == 200 ? 'alert-success' : 'alert-danger'" [hidden]="!emailSent">
@@ -16,14 +16,14 @@
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls" [ngClass]="{'floating-label-form-group-with-value': !name.errors}">
                             <label for="name">{{'contact.form.name' | translate:lang}}</label>
-                            <input #name="ngModel" class="form-control" id="name" name="name" required type="text" [(ngModel)]="contactModel.name" [placeholder]="'contact.form.name' | translate:lang"/>
+                            <input #name="ngModel" class="form-control" id="name" name="name" required type="text" [(ngModel)]="contactModel.name" [placeholder]="'contact.form.name' | translate:lang" />
                             <help-block-validation validation-text-key="contact.form.validation.name.required" [hidden]="!name.touched || !name.errors?.required"></help-block-validation>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls" [ngClass]="{'floating-label-form-group-with-value': contactModel.email}">
                             <label for="email">{{'contact.form.email' | translate:lang}}</label>
-                            <input #email="ngModel" class="form-control" id="email" name="email" required type="email" [(ngModel)]="contactModel.email" [pattern]="emailPattern" [placeholder]="'contact.form.email' | translate:lang"/>
+                            <input #email="ngModel" class="form-control" id="email" name="email" required type="email" [(ngModel)]="contactModel.email" [pattern]="emailPattern" [placeholder]="'contact.form.email' | translate:lang" />
                             <help-block-validation validation-text-key="contact.form.validation.email.required" [hidden]="!email.touched || !email.errors?.required"></help-block-validation>
                             <help-block-validation validation-text-key="contact.form.validation.email.pattern" [hidden]="!email.touched || !email.errors?.pattern"></help-block-validation>
                         </div>
@@ -31,7 +31,7 @@
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls" [ngClass]="{'floating-label-form-group-with-value': !subject.errors}">
                             <label for="name">{{'contact.form.subject' | translate:lang}}</label>
-                            <input #subject="ngModel" class="form-control" id="subject" maxlength="144" name="subject" required type="text" [(ngModel)]="contactModel.subject" [placeholder]="'contact.form.subject' | translate:lang"/>
+                            <input #subject="ngModel" class="form-control" id="subject" maxlength="144" name="subject" required type="text" [(ngModel)]="contactModel.subject" [placeholder]="'contact.form.subject' | translate:lang" />
                             <div class="floating-span help-block">
                                 <span>{{144 - contactModel.subject?.length}}</span>
                             </div>
@@ -49,7 +49,7 @@
                     <div class="row control-group">
                         <recaptcha (captchaExpired)="handleCaptchaExpired()" (captchaResponse)="handleCorrectCaptcha($event)" [language]="lang" siteKey="6LcfICsUAAAAAH-VzVKVMRurCo9npQ_LmWylt92p"></recaptcha>
                     </div>
-                    <br/>
+                    <br />
                     <div class="row">
                         <div class="form-group col-xs-12">
                             <button class="btn btn-success btn-lg" type="submit" [disabled]="!contactForm.form.valid || !captchaValid">{{'contact.form.button.submit' | translate:lang}}</button>
